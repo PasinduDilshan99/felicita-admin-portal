@@ -1,21 +1,42 @@
+"use client";
 import Sidebar from "@/components/common-components/static-components/SideBar";
-import { bookingManagementSideBarData } from "@/data/side-bar-data";
 import React from "react";
+import { useTheme } from "@/contexts/ThemeContext";
+import { bookingManagementSideBarData } from "@/data/side-bar-data";
 
-export default function TravelManagementLayout({
+export default function BookingManagementLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <div className="min-h-screen bg-[#F1F5F9]">
-      <div className="flex">
-        <Sidebar data={bookingManagementSideBarData} title="Travel Management" />
+  const { theme, isDarkMode } = useTheme();
 
-        {/* Main Content Area */}
-        <main className="flex-1 w-full min-h-screen lg:ml-0">
-          <div className="p-4 sm:p-6 lg:p-8 pt-16 lg:pt-6">
-            <div className="max-w-7xl mx-auto">{children}</div>
+  const getBackgroundColor = () => {
+    if (isDarkMode) {
+      return theme.background;
+    }
+    return "#F1F5F9";
+  };
+
+  return (
+    <div
+      className="transition-colors duration-300"
+      style={{
+        backgroundColor: getBackgroundColor(),
+        minHeight: "100vh",
+      }}
+    >
+      <div className="flex">
+        <Sidebar
+          data={bookingManagementSideBarData}
+          title="Booking Management"
+          minWidth={260}
+          maxWidth={600}
+          defaultWidth={350}
+        />
+        <main className="flex-1 w-full lg:ml-0">
+          <div className="">
+            <div className="mx-auto">{children}</div>
           </div>
         </main>
       </div>

@@ -117,6 +117,40 @@ export const GET_PENDING_BOOKINGS_DETAILS_DATA = `${BASE_PATH}${API}${VERSION}${
 export const INSERT_BOOKINGS_INQUIRY_DETAILS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/tour-book-inquiry`;
 export const CANCELLED_PENDING_BOOKINGS_DETAILS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/cancelled-pending`;
 export const GET_BOOKINGS_ID_AND_REFERENCES_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/booking-id-and-references`;
+export const GET_BOOKINGS_STATISTICS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/booking-statistics`;
+export const GET_BOOKINGS_FOR_REQUEST_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/bookings`;
+export const GET_BOOKINGS_REQUEST_PARAM_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/bookings-request-params`;
+export const GET_BOOKING_ALL_DETAILS_BY_ID_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/booking-all-details`;
+export const ADD_BOOKING_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/create-booking`;
+export const UPDATE_BOOKING_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/update-booking`;
+export const GET_BOOKING_BASIC_DETAILS_BY_ID_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/booking-basic-details`;
+export const UPDATE_BOOKING_STATUS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/update-booking-status`;
+export const TERMINATE_BOOKING_BY_ID_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/terminate-booking`;
+export const GET_CREATE_BOOKINGS_PARAMS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/create-booking-params`;
+
+// Booking Statuses
+export const GET_BOOKINGS_STATUSES_STATISTICS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/booking-status-statistics`;
+export const GET_BOOKINGS_STATUSES_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/bookings-statuses`;
+export const GET_BOOKINGS_STATUS_BASIC_DETAILS_BY_ID_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/bookings-statuses-basic-details`;
+export const GET_BOOKINGS_STATUS_ALL_DETAILS_BY_ID_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/bookings-statuses-all-details`;
+export const ADD_BOOKINGS_STATUS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/create-bookings-statuses`;
+export const UPDATE_BOOKINGS_STATUS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/update-bookings-statuses`;
+export const TERMINATE_BOOKINGS_STATUS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/terminate-bookings-statuses`;
+
+// Booking Assigns
+export const GET_BOOKINGS_ASSIGN_STATISTICS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/booking-assign-statistics`;
+export const GET_UNASSIGN_BOOKINGS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/unassign-bookings`;
+export const GET_UNASSIGN_BOOKINGS_REQUEST_PARAM_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/unassign-bookings-request-params`;
+export const GET_UNASSIGN_BOOKINGS_LIST_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/unassign-booking-list`;
+export const GET_ASSIGN_BOOKINGS_LIST_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/assign-booking-list`;
+export const ASSIGN_UNASSIGN_BOOKING_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/assigned-unassign-booking`;
+export const UPDATE_UNASSIGN_BOOKING_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/update-unassign-booking`;
+
+// Booking History
+export const GET_BOOKINGS_HISTORY_STATISTICS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/booking-history-statistics`;
+export const GET_BOOKINGS_HISTORY_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/bookings-history`;
+export const GET_BOOKINGS_HISTORY_REQUEST_PARAM_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/bookings-history-request-params`;
+export const GET_BOOKINGS_HISTORY_DETAILS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/bookings-history-details`;
 
 // User Benefits
 export const GET_ALL_ACTIVE_USER_BENEFITS_BE = `${BASE_PATH}${API}${VERSION}${USER_BENEFITS}/active`;

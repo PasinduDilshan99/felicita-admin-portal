@@ -656,3 +656,104 @@ export const BILLING_VIEW_BREADCRUMB_DATA: breadcrumbType[] = [
     href: URLS.BILLING_VIEW_PAGE_URL,
   },
 ];
+
+// Bookings
+export const BOOKING_MANAGEMENT_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  { label: "Booking Management", href: URLS.BOOKING_MANAGEMENT_URL },
+];
+
+export const TOUR_BOOKING_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_MANAGEMENT_HOME_BREADCRUMB_DATA,
+  { label: "Tour Bookings", href: URLS.TOUR_BOOKINGS_PAGE_URL },
+];
+
+export const TOUR_BOOKING_VIEW_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...TOUR_BOOKING_HOME_BREADCRUMB_DATA,
+  { label: "View", href: URLS.TOUR_BOOKINGS_VIEW_PAGE_URL },
+];
+
+export const TOUR_BOOKING_DETAILS_VIEW_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...TOUR_BOOKING_VIEW_BREADCRUMB_DATA,
+];
+
+export const TOUR_BOOKING_ADD_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...TOUR_BOOKING_HOME_BREADCRUMB_DATA,
+  { label: "Create", href: URLS.TOUR_BOOKINGS_ADD_PAGE_URL },
+];
+
+export const TOUR_BOOKING_UPDATE_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...TOUR_BOOKING_HOME_BREADCRUMB_DATA,
+  { label: "Update", href: URLS.TOUR_BOOKINGS_UPDATE_PAGE_URL },
+];
+
+export const TOUR_BOOKING_TERMINATE_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...TOUR_BOOKING_HOME_BREADCRUMB_DATA,
+  { label: "Cancel", href: URLS.TOUR_BOOKINGS_CANCEL_PAGE_URL },
+];
+
+// booking status
+export const BOOKING_STATUS_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_MANAGEMENT_HOME_BREADCRUMB_DATA,
+  { label: "Booking Status", href: URLS.BOOKING_STATUS_PAGE_URL },
+];
+
+export const BOOKING_STATUS_VIEW_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_STATUS_HOME_BREADCRUMB_DATA,
+  { label: "View", href: URLS.BOOKING_STATUS_VIEW_PAGE_URL },
+];
+
+export const BOOKING_STATUS_DETAILS_VIEW_HOME_BREADCRUMB_DATA: breadcrumbType[] =
+  [...BOOKING_STATUS_VIEW_HOME_BREADCRUMB_DATA];
+
+export const BOOKING_STATUS_ADD_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_STATUS_HOME_BREADCRUMB_DATA,
+  { label: "Create", href: URLS.BOOKING_STATUS_ADD_PAGE_URL },
+];
+
+export const BOOKING_STATUS_UPDATE_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_STATUS_HOME_BREADCRUMB_DATA,
+  { label: "Update", href: URLS.BOOKING_STATUS_UPDATE_PAGE_URL },
+];
+
+export const BOOKING_STATUS_TERMINATE_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_STATUS_HOME_BREADCRUMB_DATA,
+  { label: "Terminate", href: URLS.BOOKING_STATUS_TERMINATE_PAGE_URL },
+];
+
+// booking Assigns
+export const BOOKING_ASSIGN_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_MANAGEMENT_HOME_BREADCRUMB_DATA,
+  { label: "Booking Assign", href: URLS.BOOKING_ASSIGN_PAGE_URL },
+];
+
+export const BOOKING_ASSIGN_VIEW_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_ASSIGN_HOME_BREADCRUMB_DATA,
+  { label: "View", href: URLS.BOOKING_ASSIGN_VIEW_PAGE_URL },
+];
+
+export const BOOKING_ASSIGN_DETAILS_VIEW_HOME_BREADCRUMB_DATA: breadcrumbType[] =
+  [...BOOKING_ASSIGN_VIEW_HOME_BREADCRUMB_DATA];
+
+export const BOOKING_ASSIGN_ADD_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_ASSIGN_HOME_BREADCRUMB_DATA,
+  { label: "Create", href: URLS.BOOKING_ASSIGN_ADD_PAGE_URL },
+];
+
+export const BOOKING_ASSIGN_UPDATE_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_ASSIGN_HOME_BREADCRUMB_DATA,
+  { label: "Update", href: URLS.BOOKING_ASSIGN_UPDATE_PAGE_URL },
+];
+
+// booking History
+export const BOOKING_HISTORY_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_MANAGEMENT_HOME_BREADCRUMB_DATA,
+  { label: "Booking History", href: URLS.BOOKING_HISTORY_PAGE_URL },
+];
+
+export const BOOKING_HISTORY_VIEW_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...BOOKING_HISTORY_HOME_BREADCRUMB_DATA,
+  { label: "View", href: URLS.BOOKING_HISTORY_VIEW_PAGE_URL },
+];
+
+export const BOOKING_HISTORY_DETAILS_VIEW_HOME_BREADCRUMB_DATA: breadcrumbType[] =
+  [...BOOKING_HISTORY_VIEW_HOME_BREADCRUMB_DATA];

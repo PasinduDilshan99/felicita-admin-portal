@@ -609,16 +609,6 @@ export const bookingManagementSideBarData: SideBarDataType[] = [
         color: "#34D399",
         url: URLS.BOOKING_STATUS_VIEW_PAGE_URL,
         privilege: PRIVILEGES.BOOKING_STATUS_VIEW_PRIVILEGE,
-        grandSubData: [
-          {
-            id: 2011,
-            name: "View Booking Status Details",
-            description: "View detailed booking status information",
-            color: "#6EE7B7",
-            url: URLS.BOOKING_STATUS_DETAILS_VIEW_URL,
-            privilege: PRIVILEGES.BOOKING_STATUS_DETAILS_VIEW_PRIVILEGE,
-          },
-        ],
       },
       {
         id: 202,
@@ -661,16 +651,6 @@ export const bookingManagementSideBarData: SideBarDataType[] = [
         color: "#A78BFA",
         url: URLS.BOOKING_ASSIGN_VIEW_PAGE_URL,
         privilege: PRIVILEGES.BOOKING_ASSIGN_VIEW_PRIVILEGE,
-        grandSubData: [
-          {
-            id: 3011,
-            name: "View Unassigned Booking Details",
-            description: "View detailed unassigned booking information",
-            color: "#C4B5FD",
-            url: URLS.BOOKING_ASSIGN_DETAILS_VIEW_URL,
-            privilege: PRIVILEGES.BOOKING_ASSIGN_DETAILS_VIEW_PRIVILEGE,
-          },
-        ],
       },
       {
         id: 302,
@@ -705,16 +685,6 @@ export const bookingManagementSideBarData: SideBarDataType[] = [
         color: "#FBBF24",
         url: URLS.BOOKING_HISTORY_VIEW_PAGE_URL,
         privilege: PRIVILEGES.BOOKING_HISTORY_VIEW_PRIVILEGE,
-        grandSubData: [
-          {
-            id: 4011,
-            name: "View Booking History Details",
-            description: "View detailed booking history information",
-            color: "#FCD34D",
-            url: URLS.BOOKING_HISTORY_DETAILS_VIEW_URL,
-            privilege: PRIVILEGES.BOOKING_HISTORY_DETAILS_VIEW_PRIVILEGE,
-          },
-        ],
       },
     ],
   },

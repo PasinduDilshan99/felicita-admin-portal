@@ -797,3 +797,326 @@ export const CustomLineTooltip = ({ active, payload, label }: any) => {
     </div>
   );
 };
+
+export const BookingTrendTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="bk-tooltip">
+      <p className="bk-tooltip__label">{label}</p>
+      <p className="bk-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+    </div>
+  );
+};
+
+export const RevenueTrendTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="bk-tooltip">
+      <p className="bk-tooltip__label">{label}</p>
+      <p className="bk-tooltip__value">${payload[0].value.toLocaleString()}</p>
+    </div>
+  );
+};
+
+export const StatusPieTooltip = ({ active, payload }: any) => {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="bk-tooltip">
+      <p className="bk-tooltip__label">{payload[0].name}</p>
+      <p className="bk-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+      <p className="bk-tooltip__sub">
+        {payload[0].payload.percentage?.toFixed(1) || 0}% of total
+      </p>
+    </div>
+  );
+};
+
+export const FunnelTooltip = ({ active, payload }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  if (!data) return null;
+  return (
+    <div className="bk-tooltip">
+      <p className="bk-tooltip__label">{data.bookingStatusName}</p>
+      <p className="bk-tooltip__value">
+        {data.totalBookings.toLocaleString()} bookings
+      </p>
+      <p className="bk-tooltip__sub">
+        Conversion: {data.conversionPercentage.toFixed(1)}%
+      </p>
+    </div>
+  );
+};
+
+export const TopTourTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  if (!data) return null;
+  return (
+    <div className="bk-tooltip">
+      <p className="bk-tooltip__label">{label}</p>
+      <p className="bk-tooltip__value">
+        Bookings: {data.totalBookings.toLocaleString()}
+      </p>
+      <p className="bk-tooltip__sub">
+        Participants: {data.totalParticipants.toLocaleString()}
+      </p>
+      <p className="bk-tooltip__sub">
+        Revenue: ${data.totalRevenue.toLocaleString()}
+      </p>
+    </div>
+  );
+};
+
+export const PopularActivityTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  if (!data) return null;
+  return (
+    <div className="bk-tooltip">
+      <p className="bk-tooltip__label">{label}</p>
+      <p className="bk-tooltip__value">
+        Bookings: {data.totalBookings.toLocaleString()}
+      </p>
+      <p className="bk-tooltip__sub">
+        Participants: {data.totalParticipants.toLocaleString()}
+      </p>
+      <p className="bk-tooltip__sub">
+        Revenue: ${data.totalRevenue.toLocaleString()}
+      </p>
+    </div>
+  );
+};
+
+export const StatusDistributionTooltip = ({ active, payload }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  return (
+    <div className="bs-tooltip">
+      <p className="bs-tooltip__label">{payload[0].name}</p>
+      <p className="bs-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+      <p className="bs-tooltip__sub">
+        {data?.percentage?.toFixed(1) || 0}% of total
+      </p>
+    </div>
+  );
+};
+
+export const TrendTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  return (
+    <div className="bs-tooltip">
+      <p className="bs-tooltip__label">{label}</p>
+      <p className="bs-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+      {data?.bookingStatusName && (
+        <p className="bs-tooltip__sub">Status: {data.bookingStatusName}</p>
+      )}
+    </div>
+  );
+};
+
+export const DropOffTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  return (
+    <div className="bs-tooltip bs-tooltip--dropoff">
+      <p className="bs-tooltip__label">{label}</p>
+      <p className="bs-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+      {data?.percentage && (
+        <p className="bs-tooltip__sub">
+          {data.percentage.toFixed(1)}% of total
+        </p>
+      )}
+    </div>
+  );
+};
+
+export const EmployeeWorkloadTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  return (
+    <div className="ba-tooltip">
+      <p className="ba-tooltip__label">{label}</p>
+      <p className="ba-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+      {data?.designationName && (
+        <p className="ba-tooltip__sub">Designation: {data.designationName}</p>
+      )}
+      {data?.departmentName && (
+        <p className="ba-tooltip__sub">Department: {data.departmentName}</p>
+      )}
+    </div>
+  );
+};
+
+export const EmployeeRevenueTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  return (
+    <div className="ba-tooltip">
+      <p className="ba-tooltip__label">{label}</p>
+      <p className="ba-tooltip__value">
+        Revenue: ${data.totalRevenue?.toLocaleString()}
+      </p>
+      <p className="ba-tooltip__sub">
+        Bookings: {data.totalBookings?.toLocaleString()}
+      </p>
+    </div>
+  );
+};
+
+export const DepartmentTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  return (
+    <div className="ba-tooltip">
+      <p className="ba-tooltip__label">{label}</p>
+      <p className="ba-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+      <p className="ba-tooltip__sub">
+        {data?.percentage?.toFixed(1) || 0}% of total
+      </p>
+    </div>
+  );
+};
+
+export const DesignationTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  return (
+    <div className="ba-tooltip">
+      <p className="ba-tooltip__label">{label}</p>
+      <p className="ba-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+      <p className="ba-tooltip__sub">
+        {data?.percentage?.toFixed(1) || 0}% of total
+      </p>
+    </div>
+  );
+};
+
+export const AssignmentTrendTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="ba-tooltip">
+      <p className="ba-tooltip__label">{label}</p>
+      <p className="ba-tooltip__value">
+        {payload[0].value.toLocaleString()} assigned bookings
+      </p>
+    </div>
+  );
+};
+
+export const AssignmentStatusTooltip = ({ active, payload }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  return (
+    <div className="ba-tooltip">
+      <p className="ba-tooltip__label">{payload[0].name}</p>
+      <p className="ba-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+      <p className="ba-tooltip__sub">
+        {data?.percentage?.toFixed(1) || 0}% of total
+      </p>
+    </div>
+  );
+};
+
+export const BookingGrowthTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="bh-tooltip">
+      <p className="bh-tooltip__label">{label}</p>
+      <p className="bh-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+    </div>
+  );
+};
+
+export const RevenueGrowthTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="bh-tooltip">
+      <p className="bh-tooltip__label">{label}</p>
+      <p className="bh-tooltip__value">${payload[0].value.toLocaleString()}</p>
+    </div>
+  );
+};
+
+export const StatusHistoryTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  return (
+    <div className="bh-tooltip">
+      <p className="bh-tooltip__label">{label}</p>
+      <p className="bh-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+      {data?.bookingStatusName && (
+        <p className="bh-tooltip__sub">Status: {data.bookingStatusName}</p>
+      )}
+    </div>
+  );
+};
+
+export const CancellationTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  return (
+    <div className="bh-tooltip">
+      <p className="bh-tooltip__label">{label}</p>
+      <p className="bh-tooltip__value">
+        {payload[0].value.toLocaleString()} cancellations
+      </p>
+      {data?.cancellationRate !== undefined && (
+        <p className="bh-tooltip__sub">
+          Rate: {data.cancellationRate.toFixed(1)}%
+        </p>
+      )}
+    </div>
+  );
+};
+
+export const CustomerReturnTooltip = ({ active, payload }: any) => {
+  if (!active || !payload?.length) return null;
+  const data = payload[0]?.payload;
+  return (
+    <div className="bh-tooltip">
+      <p className="bh-tooltip__label">{payload[0].name}</p>
+      <p className="bh-tooltip__value">
+        {payload[0].value.toLocaleString()} customers
+      </p>
+      <p className="bh-tooltip__sub">
+        {data?.percentage?.toFixed(1) || 0}% of total
+      </p>
+    </div>
+  );
+};
+
+export const PeakPeriodTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="bh-tooltip">
+      <p className="bh-tooltip__label">{label}</p>
+      <p className="bh-tooltip__value">
+        {payload[0].value.toLocaleString()} bookings
+      </p>
+    </div>
+  );
+};

@@ -1,6 +1,10 @@
 import { ActivityCategoryFilterParams } from "@/types/activity-category-types";
 import { ActivityScheduleFilterParams } from "@/types/activity-schedule-types";
 import { ActivityFilterParams } from "@/types/activity-types";
+import { UnassignBookingFilterParams } from "@/types/booking-assign-types";
+import { BookingHistoryFilterParams } from "@/types/booking-history-types";
+import { BookingStatusFilterParams } from "@/types/booking-status-types";
+import { BookingFilterParams } from "@/types/booking-types";
 import { CategoryFilterParams } from "@/types/destination-category-types";
 import { DestinationFilterParams } from "@/types/destination-types";
 import { EmployeeFilterParams } from "@/types/employee-types";
@@ -695,5 +699,233 @@ export const rolesViewUrlParamsToFilters = (
       | "updatedAt"
       | undefined,
     sortDirection: (params.get("sortDirection") as "ASC" | "DESC") || "ASC",
+  };
+};
+
+export const bookingsViewFiltersToUrlParams = (
+  filters: BookingFilterParams,
+): URLSearchParams => {
+  const params = new URLSearchParams();
+
+  if (filters.name) params.set("name", filters.name);
+  if (filters.minPrice) params.set("minPrice", filters.minPrice.toString());
+  if (filters.maxPrice) params.set("maxPrice", filters.maxPrice.toString());
+  if (filters.bookingReference)
+    params.set("bookingReference", filters.bookingReference);
+  if (filters.discountAmount)
+    params.set("discountAmount", filters.discountAmount.toString());
+  if (filters.travelStartDate)
+    params.set("travelStartDate", filters.travelStartDate);
+  if (filters.travelEndDate) params.set("travelEndDate", filters.travelEndDate);
+  if (filters.bookingFrom) params.set("bookingFrom", filters.bookingFrom);
+  if (filters.bookingTo) params.set("bookingTo", filters.bookingTo);
+  if (filters.bookingStatusId)
+    params.set("bookingStatusId", filters.bookingStatusId.toString());
+  if (filters.tourId) params.set("tourId", filters.tourId.toString());
+  if (filters.packageId) params.set("packageId", filters.packageId.toString());
+  if (filters.assignTo) params.set("assignTo", filters.assignTo.toString());
+  if (filters.pageSize) params.set("pageSize", filters.pageSize.toString());
+  if (filters.pageNumber && filters.pageNumber !== 1)
+    params.set("pageNumber", filters.pageNumber.toString());
+  if (filters.sortBy) params.set("sortBy", filters.sortBy);
+  if (filters.sortDirection) params.set("sortDirection", filters.sortDirection);
+
+  return params;
+};
+
+export const bookingsViewUrlParamsToFilters = (
+  params: URLSearchParams,
+): BookingFilterParams => {
+  return {
+    name: params.get("name") || null,
+    minPrice: params.get("minPrice")
+      ? parseFloat(params.get("minPrice")!)
+      : null,
+    maxPrice: params.get("maxPrice")
+      ? parseFloat(params.get("maxPrice")!)
+      : null,
+    bookingReference: params.get("bookingReference") || null,
+    discountAmount: params.get("discountAmount")
+      ? parseFloat(params.get("discountAmount")!)
+      : null,
+    travelStartDate: params.get("travelStartDate") || null,
+    travelEndDate: params.get("travelEndDate") || null,
+    bookingFrom: params.get("bookingFrom") || null,
+    bookingTo: params.get("bookingTo") || null,
+    bookingStatusId: params.get("bookingStatusId")
+      ? parseInt(params.get("bookingStatusId")!)
+      : null,
+    tourId: params.get("tourId") ? parseInt(params.get("tourId")!) : null,
+    packageId: params.get("packageId")
+      ? parseInt(params.get("packageId")!)
+      : null,
+    assignTo: params.get("assignTo") ? parseInt(params.get("assignTo")!) : null,
+    pageSize: params.get("pageSize") ? parseInt(params.get("pageSize")!) : 6,
+    pageNumber: params.get("pageNumber")
+      ? parseInt(params.get("pageNumber")!)
+      : 1,
+    sortBy: params.get("sortBy") || null,
+    sortDirection: params.get("sortDirection") || "ASC",
+  };
+};
+
+export const bookingStatusViewFiltersToUrlParams = (
+  filters: BookingStatusFilterParams,
+): URLSearchParams => {
+  const params = new URLSearchParams();
+
+  if (filters.name) params.set("name", filters.name);
+  if (filters.status) params.set("status", filters.status);
+  if (filters.pageSize) params.set("pageSize", filters.pageSize.toString());
+  if (filters.pageNumber && filters.pageNumber !== 1)
+    params.set("pageNumber", filters.pageNumber.toString());
+  if (filters.sortBy) params.set("sortBy", filters.sortBy);
+  if (filters.sortDirection) params.set("sortDirection", filters.sortDirection);
+
+  return params;
+};
+
+export const bookingStatusViewUrlParamsToFilters = (
+  params: URLSearchParams,
+): BookingStatusFilterParams => {
+  const sortDirection = params.get("sortDirection");
+  return {
+    name: params.get("name") || null,
+    status: params.get("status") || null,
+    pageSize: params.get("pageSize") ? parseInt(params.get("pageSize")!) : 6,
+    pageNumber: params.get("pageNumber")
+      ? parseInt(params.get("pageNumber")!)
+      : 1,
+    sortBy: params.get("sortBy") || "statusName",
+    sortDirection: (sortDirection === "DESC" ? "DESC" : "ASC") as
+      | "ASC"
+      | "DESC",
+  };
+};
+
+export const assignBookingsFiltersToUrlParams = (
+  filters: UnassignBookingFilterParams,
+): URLSearchParams => {
+  const params = new URLSearchParams();
+
+  if (filters.name) params.set("name", filters.name);
+  if (filters.bookingReference)
+    params.set("bookingReference", filters.bookingReference);
+  if (filters.bookingStatusId)
+    params.set("bookingStatusId", filters.bookingStatusId.toString());
+  if (filters.customerName) params.set("customerName", filters.customerName);
+  if (filters.email) params.set("email", filters.email);
+  if (filters.mobileNumber) params.set("mobileNumber", filters.mobileNumber);
+  if (filters.tourId) params.set("tourId", filters.tourId.toString());
+  if (filters.packageId) params.set("packageId", filters.packageId.toString());
+  if (filters.packageScheduleId)
+    params.set("packageScheduleId", filters.packageScheduleId.toString());
+  if (filters.bookingDateFrom)
+    params.set("bookingDateFrom", filters.bookingDateFrom);
+  if (filters.bookingDateTo) params.set("bookingDateTo", filters.bookingDateTo);
+  if (filters.travelStartDateFrom)
+    params.set("travelStartDateFrom", filters.travelStartDateFrom);
+  if (filters.travelStartDateTo)
+    params.set("travelStartDateTo", filters.travelStartDateTo);
+  if (filters.assignTo) params.set("assignTo", filters.assignTo.toString());
+  if (filters.pageSize) params.set("pageSize", filters.pageSize.toString());
+  if (filters.pageNumber && filters.pageNumber !== 1)
+    params.set("pageNumber", filters.pageNumber.toString());
+  if (filters.sortBy) params.set("sortBy", filters.sortBy);
+  if (filters.sortDirection) params.set("sortDirection", filters.sortDirection);
+
+  return params;
+};
+
+export const assignBookingsUrlParamsToFilters = (
+  params: URLSearchParams,
+): UnassignBookingFilterParams => {
+  return {
+    name: params.get("name") || null,
+    bookingReference: params.get("bookingReference") || null,
+    bookingStatusId: params.get("bookingStatusId")
+      ? parseInt(params.get("bookingStatusId")!)
+      : null,
+    customerName: params.get("customerName") || null,
+    email: params.get("email") || null,
+    mobileNumber: params.get("mobileNumber") || null,
+    tourId: params.get("tourId") ? parseInt(params.get("tourId")!) : null,
+    packageId: params.get("packageId")
+      ? parseInt(params.get("packageId")!)
+      : null,
+    packageScheduleId: params.get("packageScheduleId")
+      ? parseInt(params.get("packageScheduleId")!)
+      : null,
+    bookingDateFrom: params.get("bookingDateFrom") || null,
+    bookingDateTo: params.get("bookingDateTo") || null,
+    travelStartDateFrom: params.get("travelStartDateFrom") || null,
+    travelStartDateTo: params.get("travelStartDateTo") || null,
+    assignTo: params.get("assignTo") ? parseInt(params.get("assignTo")!) : null,
+    pageSize: params.get("pageSize") ? parseInt(params.get("pageSize")!) : 6,
+    pageNumber: params.get("pageNumber")
+      ? parseInt(params.get("pageNumber")!)
+      : 1,
+    sortBy: params.get("sortBy") || null,
+    sortDirection: params.get("sortDirection") || "ASC",
+  };
+};
+
+export const bookingHistoryFiltersToUrlParams = (
+  filters: BookingHistoryFilterParams,
+): URLSearchParams => {
+  const params = new URLSearchParams();
+
+  if (filters.name) params.set("name", filters.name);
+  if (filters.minPrice) params.set("minPrice", filters.minPrice.toString());
+  if (filters.maxPrice) params.set("maxPrice", filters.maxPrice.toString());
+  if (filters.bookingReference)
+    params.set("bookingReference", filters.bookingReference);
+  if (filters.travelStartDate)
+    params.set("travelStartDate", filters.travelStartDate);
+  if (filters.travelEndDate) params.set("travelEndDate", filters.travelEndDate);
+  if (filters.bookingFrom) params.set("bookingFrom", filters.bookingFrom);
+  if (filters.bookingTo) params.set("bookingTo", filters.bookingTo);
+  if (filters.tourId) params.set("tourId", filters.tourId.toString());
+  if (filters.packageId) params.set("packageId", filters.packageId.toString());
+  if (filters.bookingStatusId)
+    params.set("bookingStatusId", filters.bookingStatusId.toString());
+  if (filters.pageSize) params.set("pageSize", filters.pageSize.toString());
+  if (filters.pageNumber && filters.pageNumber !== 1)
+    params.set("pageNumber", filters.pageNumber.toString());
+  if (filters.sortBy) params.set("sortBy", filters.sortBy);
+  if (filters.sortDirection) params.set("sortDirection", filters.sortDirection);
+
+  return params;
+};
+
+export const bookingHistoryUrlParamsToFilters = (
+  params: URLSearchParams,
+): BookingHistoryFilterParams => {
+  return {
+    name: params.get("name") || null,
+    minPrice: params.get("minPrice")
+      ? parseFloat(params.get("minPrice")!)
+      : null,
+    maxPrice: params.get("maxPrice")
+      ? parseFloat(params.get("maxPrice")!)
+      : null,
+    bookingReference: params.get("bookingReference") || null,
+    travelStartDate: params.get("travelStartDate") || null,
+    travelEndDate: params.get("travelEndDate") || null,
+    bookingFrom: params.get("bookingFrom") || null,
+    bookingTo: params.get("bookingTo") || null,
+    tourId: params.get("tourId") ? parseInt(params.get("tourId")!) : null,
+    packageId: params.get("packageId")
+      ? parseInt(params.get("packageId")!)
+      : null,
+    bookingStatusId: params.get("bookingStatusId")
+      ? parseInt(params.get("bookingStatusId")!)
+      : null,
+    pageSize: params.get("pageSize") ? parseInt(params.get("pageSize")!) : 6,
+    pageNumber: params.get("pageNumber")
+      ? parseInt(params.get("pageNumber")!)
+      : 1,
+    sortBy: params.get("sortBy") || null,
+    sortDirection: params.get("sortDirection") || "ASC",
   };
 };

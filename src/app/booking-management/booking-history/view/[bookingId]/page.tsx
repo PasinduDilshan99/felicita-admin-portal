@@ -1,5 +1,5 @@
 import ProtectedRoute from "@/components/ProtectedRoute";
-import ActivityDetailsPage from "@/pages/content-management/activities/ActivityDetailsPage";
+import BookingHistoryDetailsViewPage from "@/pages/booking-management/booking-history/BookingHistoryDetailsViewPage";
 import { BOOKINGS_HISTORY_DETAILS_VIEW_PAGE_TITLE } from "@/utils/pagesHeaderTitles";
 import { BOOKING_HISTORY_DETAILS_VIEW_PRIVILEGE } from "@/utils/privileges";
 import { Metadata } from "next";
@@ -11,8 +11,10 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <ProtectedRoute requiredPrivileges={[BOOKING_HISTORY_DETAILS_VIEW_PRIVILEGE]}>
-      <ActivityDetailsPage />
+    <ProtectedRoute
+      requiredPrivileges={[BOOKING_HISTORY_DETAILS_VIEW_PRIVILEGE]}
+    >
+      <BookingHistoryDetailsViewPage />
     </ProtectedRoute>
   );
 };

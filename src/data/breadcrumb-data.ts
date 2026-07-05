@@ -731,7 +731,7 @@ export const BOOKING_ASSIGN_VIEW_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
   { label: "View", href: URLS.BOOKING_ASSIGN_VIEW_PAGE_URL },
 ];
 
-export const BOOKING_ASSIGN_DETAILS_VIEW_HOME_BREADCRUMB_DATA: breadcrumbType[] =
+export const BOOKING_ASSIGN_DETAILS_VIEW_BREADCRUMB_DATA: breadcrumbType[] =
   [...BOOKING_ASSIGN_VIEW_HOME_BREADCRUMB_DATA];
 
 export const BOOKING_ASSIGN_ADD_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
@@ -739,7 +739,7 @@ export const BOOKING_ASSIGN_ADD_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
   { label: "Create", href: URLS.BOOKING_ASSIGN_ADD_PAGE_URL },
 ];
 
-export const BOOKING_ASSIGN_UPDATE_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+export const BOOKING_ASSIGN_UPDATE_BREADCRUMB_DATA: breadcrumbType[] = [
   ...BOOKING_ASSIGN_HOME_BREADCRUMB_DATA,
   { label: "Update", href: URLS.BOOKING_ASSIGN_UPDATE_PAGE_URL },
 ];

@@ -140,7 +140,9 @@ export class BookingStatusService {
   ): Promise<BookingStatusAllDetailsApiResponse> {
     try {
       const requestBody: GetBookingStatusAllDetailsRequest = { id: statusId };
-
+console.log('====================================');
+console.log("AAA");
+console.log('====================================');
       const response = await fetch(
         GET_BOOKINGS_STATUS_ALL_DETAILS_BY_ID_DATA_FE,
         {

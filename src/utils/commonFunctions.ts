@@ -1,5 +1,6 @@
-export const formatDate = (dateString: string): string => {
+export const formatDate = (dateString: string | null | undefined): string => {
   if (!dateString) return "N/A";
+
   try {
     return new Date(dateString).toLocaleDateString("en-US", {
       year: "numeric",
@@ -116,3 +117,32 @@ export const getInitials = (name: string): string =>
     .map((n) => n[0])
     .join("")
     .toUpperCase();
+
+export const formatFileSize = (bytes: number) => {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+};
+
+export const getFileIcon = (type: string) => {
+  if (type.includes("pdf")) return "📄";
+  if (type.includes("image")) return "🖼️";
+  if (type.includes("word") || type.includes("doc")) return "📝";
+  if (type.includes("excel") || type.includes("sheet")) return "📊";
+  return "📁";
+};
+
+export const formatDateTime = (dateStr: string): string => {
+  if (!dateStr) return "N/A";
+  try {
+    return new Date(dateStr).toLocaleString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  } catch {
+    return dateStr;
+  }
+};

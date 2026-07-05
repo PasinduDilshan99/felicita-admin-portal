@@ -47,7 +47,8 @@ export interface BookingStatusStatisticsData {
   dropOffStatistics: BookingDropOffStatistics[];
 }
 
-export type BookingStatusStatisticsApiResponse = ApiResponse<BookingStatusStatisticsData>;
+export type BookingStatusStatisticsApiResponse =
+  ApiResponse<BookingStatusStatisticsData>;
 
 // ============ Booking Status List ============
 export interface BookingStatusListItem {
@@ -67,7 +68,8 @@ export interface BookingStatusBasicDetails {
   status: string;
 }
 
-export type BookingStatusBasicDetailsApiResponse = ApiResponse<BookingStatusBasicDetails>;
+export type BookingStatusBasicDetailsApiResponse =
+  ApiResponse<BookingStatusBasicDetails>;
 
 // ============ Booking Status All Details ============
 export interface BookingStatusAllDetails {
@@ -87,7 +89,8 @@ export interface BookingStatusAllDetails {
   terminatedBy: number | null;
 }
 
-export type BookingStatusAllDetailsApiResponse = ApiResponse<BookingStatusAllDetails>;
+export type BookingStatusAllDetailsApiResponse =
+  ApiResponse<BookingStatusAllDetails>;
 
 // ============ Create Booking Status ============
 export interface CreateBookingStatusRequest {
@@ -100,7 +103,8 @@ export interface CreateBookingStatusResponse {
   message: string | null;
 }
 
-export type CreateBookingStatusApiResponse = ApiResponse<CreateBookingStatusResponse>;
+export type CreateBookingStatusApiResponse =
+  ApiResponse<CreateBookingStatusResponse>;
 
 // ============ Update Booking Status ============
 export interface UpdateBookingStatusRequest {
@@ -115,7 +119,8 @@ export interface UpdateBookingStatusResponse {
   id: number | null;
 }
 
-export type UpdateBookingStatusApiResponse = ApiResponse<UpdateBookingStatusResponse>;
+export type UpdateBookingStatusApiResponse =
+  ApiResponse<UpdateBookingStatusResponse>;
 
 // ============ Terminate Booking Status ============
 export interface TerminateBookingStatusRequest {
@@ -126,7 +131,8 @@ export interface TerminateBookingStatusResponse {
   message: string | null;
 }
 
-export type TerminateBookingStatusApiResponse = ApiResponse<TerminateBookingStatusResponse>;
+export type TerminateBookingStatusApiResponse =
+  ApiResponse<TerminateBookingStatusResponse>;
 
 // ============ Get Booking Status Basic Details Request ============
 export interface GetBookingStatusBasicDetailsRequest {
@@ -136,4 +142,13 @@ export interface GetBookingStatusBasicDetailsRequest {
 // ============ Get Booking Status All Details Request ============
 export interface GetBookingStatusAllDetailsRequest {
   id: number;
+}
+
+export interface BookingStatusFilterParams {
+  name: string | null;
+  status: string | null;
+  pageSize: number;
+  pageNumber: number;
+  sortBy: string;
+  sortDirection: "ASC" | "DESC";
 }

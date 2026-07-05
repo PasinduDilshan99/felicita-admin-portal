@@ -148,7 +148,7 @@ export const BOOKING_ASSIGN_UPDATE_PAGE_URL = `${BOOKING_ASSIGN_PAGE_URL}/update
 
 // Booking History
 export const BOOKING_HISTORY_PAGE_URL = `${BOOKING_MANAGEMENT_URL}/booking-history`;
-export const BOOKING_HISTORY_VIEW_PAGE_URL = `${BOOKING_HISTORY_PAGE_URL}/view-new`;
+export const BOOKING_HISTORY_VIEW_PAGE_URL = `${BOOKING_HISTORY_PAGE_URL}/view`;
 export const BOOKING_HISTORY_DETAILS_VIEW_URL = `${BOOKING_HISTORY_VIEW_PAGE_URL}`;
 
 // ==================== EMPLOYEE MANAGEMENT ====================

@@ -147,8 +147,8 @@ export interface BookingFilterParams {
   travelEndDate: string | null;
   bookingFrom: string | null;
   bookingTo: string | null;
-  pageSize: number | null;
-  pageNumber: number | null;
+  pageSize: number;
+  pageNumber: number;
   bookingStatusId: number | null;
   tourId: number | null;
   packageId: number | null;
@@ -880,4 +880,66 @@ export interface GetBookingAllDetailsRequest {
 
 export interface GetCreateBookingParamsRequest {
   id: number;
+}
+
+export interface BookingCancellationProps {
+  cancellation: CancellationInformation;
+}
+
+export interface BookingInvoiceProps {
+  invoice: BookingInvoice;
+}
+
+export interface BookingPriceBreakdownProps {
+  items: PriceBreakDown[];
+}
+
+export interface BookingNotesProps {
+  notes: BookingNote[];
+}
+
+export interface BookingInsuranceProps {
+  insurance: BookingInsurance;
+}
+
+export interface BookingDocumentsProps {
+  documents: BookingDocument[];
+}
+
+export interface BookingItineraryProps {
+  itineraries: BookingItinerary[];
+}
+
+export interface BookingActivitiesProps {
+  activities: BookingActivity[];
+}
+
+export interface BookingTransportationsProps {
+  transportations: Transportation[];
+}
+
+export interface BookingAccommodationsProps {
+  accommodations: Accommodation[];
+}
+
+export interface BookingParticipantsProps {
+  participants: Participant[];
+}
+
+export interface BookingStatusAssignmentProps {
+  status: BookingStatusInformation;
+  assignment: AssignmentInformation;
+}
+
+export interface BookingTourPackageInfoProps {
+  tour: TourInformation;
+  packageInfo: PackageInformation;
+}
+
+export interface BookingHeaderProps {
+  booking: BookingInformation;
+}
+
+export interface BookingCustomerInfoProps {
+  customer: CustomerInformation;
 }

@@ -112,6 +112,7 @@ export const GET_BOOKINGS_STATUS_ALL_DETAILS_BY_ID_DATA_FE = `${API}${BOOKING}/s
 export const ADD_BOOKINGS_STATUS_DATA_FE = `${API}${BOOKING}/status/create-bookings-statuses`;
 export const UPDATE_BOOKINGS_STATUS_DATA_FE = `${API}${BOOKING}/status/update-bookings-statuses`;
 export const TERMINATE_BOOKINGS_STATUS_DATA_FE = `${API}${BOOKING}/status/terminate-bookings-statuses`;
+export const GET_BOOKING_STATUS_ID_AND_NAMES_FE = `${API}${BOOKING}/status/bookings-statuses-id-and-names`;
 
 // Booking Assigns
 export const GET_BOOKINGS_ASSIGN_STATISTICS_DATA_FE = `${API}${BOOKING}/assign/booking-assign-statistics`;

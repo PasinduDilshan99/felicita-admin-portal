@@ -13,9 +13,11 @@ import {
   GetBookingStatusBasicDetailsRequest,
   GetBookingStatusAllDetailsRequest,
   TerminateBookingStatusRequest,
+  BookingStatusIdAndNameApiResponse,
 } from "@/types/booking-status-types";
 import {
   ADD_BOOKINGS_STATUS_DATA_FE,
+  GET_BOOKING_STATUS_ID_AND_NAMES_FE,
   GET_BOOKINGS_STATUS_ALL_DETAILS_BY_ID_DATA_FE,
   GET_BOOKINGS_STATUS_BASIC_DETAILS_BY_ID_DATA_FE,
   GET_BOOKINGS_STATUSES_DATA_FE,
@@ -140,9 +142,6 @@ export class BookingStatusService {
   ): Promise<BookingStatusAllDetailsApiResponse> {
     try {
       const requestBody: GetBookingStatusAllDetailsRequest = { id: statusId };
-console.log('====================================');
-console.log("AAA");
-console.log('====================================');
       const response = await fetch(
         GET_BOOKINGS_STATUS_ALL_DETAILS_BY_ID_DATA_FE,
         {
@@ -277,6 +276,41 @@ console.log('====================================');
       return data;
     } catch (error) {
       console.error("Error terminating booking status:", error);
+      throw error;
+    }
+  }
+
+  // Add this method to the BookingStatusService class
+
+  /**
+   * Get all booking status IDs and names for dropdown/selection
+   */
+  static async getBookingStatusIdAndNames(): Promise<BookingStatusIdAndNameApiResponse> {
+    try {
+      const response = await fetch(GET_BOOKING_STATUS_ID_AND_NAMES_FE, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        credentials: "include",
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data: BookingStatusIdAndNameApiResponse = await response.json();
+
+      if (data.code !== 200) {
+        throw new Error(
+          data.message || "Failed to fetch booking status IDs and names",
+        );
+      }
+
+      return data;
+    } catch (error) {
+      console.error("Error fetching booking status IDs and names:", error);
       throw error;
     }
   }

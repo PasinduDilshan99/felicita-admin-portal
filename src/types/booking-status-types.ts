@@ -152,3 +152,10 @@ export interface BookingStatusFilterParams {
   sortBy: string;
   sortDirection: "ASC" | "DESC";
 }
+
+export interface BookingStatusIdAndName {
+  bookingStatusId: number;
+  bookingStatusName: string;
+}
+
+export type BookingStatusIdAndNameApiResponse = ApiResponse<BookingStatusIdAndName[]>;

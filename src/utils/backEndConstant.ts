@@ -136,6 +136,7 @@ export const GET_BOOKINGS_STATUS_ALL_DETAILS_BY_ID_DATA = `${BASE_PATH}${API}${V
 export const ADD_BOOKINGS_STATUS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/create-bookings-statuses`;
 export const UPDATE_BOOKINGS_STATUS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/update-bookings-statuses`;
 export const TERMINATE_BOOKINGS_STATUS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/terminate-bookings-statuses`;
+export const GET_BOOKING_STATUS_ID_AND_NAMES = `${BASE_PATH}${API}${VERSION}${BOOKING}/bookings-statuses-id-and-names`;
 
 // Booking Assigns
 export const GET_BOOKINGS_ASSIGN_STATISTICS_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/booking-assign-statistics`;

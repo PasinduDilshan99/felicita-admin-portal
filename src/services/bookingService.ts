@@ -266,10 +266,10 @@ export class BookingService {
    * Get create booking parameters
    */
   static async getCreateBookingParams(
-    userId: number,
+    tourId: number,
   ): Promise<CreateBookingParamsApiResponse> {
     try {
-      const requestBody: GetCreateBookingParamsRequest = { id: userId };
+      const requestBody: GetCreateBookingParamsRequest = { id: tourId };
 
       const response = await fetch(GET_CREATE_BOOKINGS_PARAMS_DATA_FE, {
         method: "POST",

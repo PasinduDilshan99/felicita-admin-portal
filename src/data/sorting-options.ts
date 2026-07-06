@@ -144,3 +144,41 @@ export const ROLE_VIEW_SORTING_OPTIONS = [
   { value: "createdAt", label: "Created Date" },
   { value: "updatedAt", label: "Updated Date" },
 ];
+
+export const BOOKINGS_VIEW_SORTING_OPTIONS = [
+  { value: "bookingId", label: "Booking ID" },
+  { value: "bookingReference", label: "Reference" },
+  { value: "bookingDate", label: "Booking Date" },
+  { value: "travelStartDate", label: "Travel Start Date" },
+  { value: "travelEndDate", label: "Travel End Date" },
+  { value: "customerName", label: "Customer Name" },
+  { value: "totalAmount", label: "Total Amount" },
+  { value: "finalAmount", label: "Final Amount" },
+  { value: "bookingStatusName", label: "Status" },
+];
+
+export const BOOKING_STATUS_VIEW_SORTING_OPTIONS = [
+  { value: "statusName", label: "Status Name" },
+  { value: "statusId", label: "Status ID" },
+  { value: "status", label: "Status" },
+];
+
+export const ASSIGN_BOOKING_VIEW_SORTING_OPTIONS = [
+  { value: "bookingId", label: "Booking ID" },
+  { value: "bookingReference", label: "Reference" },
+  { value: "bookingDate", label: "Booking Date" },
+  { value: "travelStartDate", label: "Travel Start Date" },
+  { value: "customerName", label: "Customer Name" },
+  { value: "finalAmount", label: "Final Amount" },
+  { value: "bookingStatus", label: "Status" },
+];
+
+export const BOOKING_HISTORY_VIEW_SORTING_OPTIONS = [
+  { value: "bookingId", label: "Booking ID" },
+  { value: "bookingReference", label: "Reference" },
+  { value: "customerName", label: "Customer Name" },
+  { value: "bookingDate", label: "Booking Date" },
+  { value: "travelStartDate", label: "Travel Start Date" },
+  { value: "finalAmount", label: "Final Amount" },
+  { value: "bookingStatus", label: "Status" },
+];

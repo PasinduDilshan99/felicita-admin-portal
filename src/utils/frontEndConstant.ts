@@ -91,7 +91,43 @@ export const GET_CANCELLED_BOOKINGS_DETAILS_DATA_FE = `${API}${BOOKING}/cancelle
 export const GET_PENDING_BOOKINGS_DETAILS_DATA_FE = `${API}${BOOKING}/pending`;
 export const INSERT_BOOKINGS_INQUIRY_DETAILS_DATA_FE = `${API}${BOOKING}/insert-booking-inquiry`;
 export const CANCELLED_PENDING_BOOKINGS_DETAILS_DATA_FE = `${API}${BOOKING}/pending/cancelled`;
+
 export const GET_BOOKINGS_ID_AND_REFERENCES_DATA_FE = `${API}${BOOKING}/booking-id-and-references`;
+export const GET_BOOKINGS_STATISTICS_DATA_FE = `${API}${BOOKING}/booking-statistics`;
+export const GET_BOOKINGS_FOR_REQUEST_DATA_FE = `${API}${BOOKING}/bookings`;
+export const GET_BOOKINGS_REQUEST_PARAM_DATA_FE = `${API}${BOOKING}/bookings-request-params`;
+export const GET_BOOKING_ALL_DETAILS_BY_ID_DATA_FE = `${API}${BOOKING}/booking-all-details`;
+export const ADD_BOOKING_DATA_FE = `${API}${BOOKING}/create-booking`;
+export const UPDATE_BOOKING_DATA_FE = `${API}${BOOKING}/update-booking`;
+export const GET_BOOKING_BASIC_DETAILS_BY_ID_DATA_FE = `${API}${BOOKING}/booking-basic-details`;
+export const UPDATE_BOOKING_STATUS_DATA_FE = `${API}${BOOKING}/update-booking-status`;
+export const TERMINATE_BOOKING_BY_ID_DATA_FE = `${API}${BOOKING}/terminate-booking`;
+export const GET_CREATE_BOOKINGS_PARAMS_DATA_FE = `${API}${BOOKING}/create-booking-params`;
+
+// Booking Statuses
+export const GET_BOOKINGS_STATUSES_STATISTICS_DATA_FE = `${API}${BOOKING}/status/booking-status-statistics`;
+export const GET_BOOKINGS_STATUSES_DATA_FE = `${API}${BOOKING}/status/bookings-statuses`;
+export const GET_BOOKINGS_STATUS_BASIC_DETAILS_BY_ID_DATA_FE = `${API}${BOOKING}/status/bookings-statuses-basic-details`;
+export const GET_BOOKINGS_STATUS_ALL_DETAILS_BY_ID_DATA_FE = `${API}${BOOKING}/status/bookings-statuses-all-details`;
+export const ADD_BOOKINGS_STATUS_DATA_FE = `${API}${BOOKING}/status/create-bookings-statuses`;
+export const UPDATE_BOOKINGS_STATUS_DATA_FE = `${API}${BOOKING}/status/update-bookings-statuses`;
+export const TERMINATE_BOOKINGS_STATUS_DATA_FE = `${API}${BOOKING}/status/terminate-bookings-statuses`;
+export const GET_BOOKING_STATUS_ID_AND_NAMES_FE = `${API}${BOOKING}/status/bookings-statuses-id-and-names`;
+
+// Booking Assigns
+export const GET_BOOKINGS_ASSIGN_STATISTICS_DATA_FE = `${API}${BOOKING}/assign/booking-assign-statistics`;
+export const GET_UNASSIGN_BOOKINGS_DATA_FE = `${API}${BOOKING}/assign/unassign-bookings`;
+export const GET_UNASSIGN_BOOKINGS_REQUEST_PARAM_DATA_FE = `${API}${BOOKING}/assign/unassign-bookings-request-params`;
+export const GET_UNASSIGN_BOOKINGS_LIST_DATA_FE = `${API}${BOOKING}/assign/unassign-booking-list`;
+export const GET_ASSIGN_BOOKINGS_LIST_DATA_FE = `${API}${BOOKING}/assign/assign-booking-list`;
+export const ASSIGN_UNASSIGN_BOOKING_DATA_FE = `${API}${BOOKING}/assign/assigned-unassign-booking`;
+export const UPDATE_UNASSIGN_BOOKING_DATA_FE = `${API}${BOOKING}/assign/update-unassign-booking`;
+
+// Booking History
+export const GET_BOOKINGS_HISTORY_STATISTICS_DATA_FE = `${API}${BOOKING}/history/booking-history-statistics`;
+export const GET_BOOKINGS_HISTORY_DATA_FE = `${API}${BOOKING}/history/bookings-history`;
+export const GET_BOOKINGS_HISTORY_REQUEST_PARAM_DATA_FE = `${API}${BOOKING}/history/bookings-history-request-params`;
+export const GET_BOOKINGS_HISTORY_DETAILS_DATA_FE = `${API}${BOOKING}/history/bookings-history-details`;
 
 // User Benefits
 export const GET_ALL_ACTIVE_USER_BENEFITS_FE = `${API}${USER_BENEFITS}`;

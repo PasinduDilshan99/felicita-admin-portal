@@ -1235,3 +1235,386 @@ export const getSeasonStatisticsData = (statistics: any): StatCardType[] => {
     },
   ];
 };
+
+// In statistics-data.ts, add this function:
+
+export const getBookingStatisticsData = (statistics: any): StatCardType[] => {
+  if (!statistics) return [];
+
+  return [
+    {
+      title: "Total Bookings",
+      value: statistics.summary.totalBookings,
+      accent: "blue",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M20 7h-4.18A3 3 0 0013 4.18V4a2 2 0 10-4 0v.18A3 3 0 008.18 7H4" />
+          <path d="M4 7v12a2 2 0 002 2h12a2 2 0 002-2V7" />
+          <line x1="9" y1="11" x2="15" y2="11" />
+          <line x1="9" y1="15" x2="15" y2="15" />
+        </svg>
+      ),
+    },
+    {
+      title: "Total Revenue",
+      value: statistics.summary.totalRevenue,
+      accent: "emerald",
+      prefix: "$",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M16 8h-6a2 2 0 100 4h4a2 2 0 110 4H8" />
+          <path d="M12 6v2M12 16v2" />
+        </svg>
+      ),
+    },
+    {
+      title: "Active Bookings",
+      value: statistics.summary.activeBookings,
+      accent: "amber",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Total Travellers",
+      value: statistics.summary.totalTravellers,
+      accent: "violet",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 00-3-3.87" />
+          <path d="M16 3.13a4 4 0 010 7.75" />
+        </svg>
+      ),
+    },
+    {
+      title: "Average Booking Value",
+      value: statistics.summary.averageBookingValue,
+      accent: "rose",
+      prefix: "$",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 2v4M12 22v-4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M22 12h-4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      ),
+    },
+  ];
+};
+
+// In statistics-data.ts, add this function:
+
+export const getBookingStatusStatisticsData = (
+  statistics: any,
+): StatCardType[] => {
+  if (!statistics) return [];
+
+  return [
+    {
+      title: "Total Statuses",
+      value: statistics.summary.totalStatuses,
+      accent: "blue",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="3" y="3" width="7" height="7" rx="1" />
+          <rect x="14" y="3" width="7" height="7" rx="1" />
+          <rect x="3" y="14" width="7" height="7" rx="1" />
+          <rect x="14" y="14" width="7" height="7" rx="1" />
+        </svg>
+      ),
+    },
+    {
+      title: "Active Statuses",
+      value: statistics.summary.activeStatuses,
+      accent: "emerald",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Most Used Status",
+      value: statistics.summary.mostUsedStatusCount,
+      valueText: statistics.summary.mostUsedStatus || "N/A",
+      accent: "amber",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 2v4M12 22v-4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M22 12h-4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      ),
+    },
+    {
+      title: "Inquiry to Booked Rate",
+      value: statistics.summary.inquiryToBookedPercentage,
+      accent: "violet",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4-3-9s1.34-9 3-9" />
+        </svg>
+      ),
+    },
+  ];
+};
+
+// In statistics-data.ts, add this function:
+
+export const getBookingAssignStatisticsData = (
+  statistics: any,
+): StatCardType[] => {
+  if (!statistics) return [];
+
+  return [
+    {
+      title: "Total Bookings",
+      value: statistics.summary.totalBookings,
+      accent: "blue",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M20 7h-4.18A3 3 0 0013 4.18V4a2 2 0 10-4 0v.18A3 3 0 008.18 7H4" />
+          <path d="M4 7v12a2 2 0 002 2h12a2 2 0 002-2V7" />
+          <line x1="9" y1="11" x2="15" y2="11" />
+          <line x1="9" y1="15" x2="15" y2="15" />
+        </svg>
+      ),
+    },
+    {
+      title: "Assigned",
+      value: statistics.summary.assignedBookings,
+      accent: "emerald",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Unassigned",
+      value: statistics.summary.unassignedBookings,
+      accent: "rose",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="12" r="9" />
+          <path d="M15 9l-6 6M9 9l6 6" />
+        </svg>
+      ),
+    },
+    {
+      title: "Total Employees",
+      value: statistics.summary.totalAssignedEmployees,
+      accent: "amber",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 00-3-3.87" />
+          <path d="M16 3.13a4 4 0 010 7.75" />
+        </svg>
+      ),
+    },
+    {
+      title: "Avg Bookings/Employee",
+      value: statistics.summary.averageBookingsPerEmployee,
+      accent: "violet",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg>
+      ),
+    },
+  ];
+};
+
+// In statistics-data.ts, add this function:
+
+export const getBookingHistoryStatisticsData = (
+  statistics: any,
+): StatCardType[] => {
+  if (!statistics) return [];
+
+  return [
+    {
+      title: "Total Bookings",
+      value: statistics.summary.totalBookings,
+      accent: "blue",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M20 7h-4.18A3 3 0 0013 4.18V4a2 2 0 10-4 0v.18A3 3 0 008.18 7H4" />
+          <path d="M4 7v12a2 2 0 002 2h12a2 2 0 002-2V7" />
+          <line x1="9" y1="11" x2="15" y2="11" />
+          <line x1="9" y1="15" x2="15" y2="15" />
+        </svg>
+      ),
+    },
+    {
+      title: "Total Revenue",
+      value: statistics.summary.totalRevenue,
+      accent: "emerald",
+      prefix: "$",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M16 8h-6a2 2 0 100 4h4a2 2 0 110 4H8" />
+          <path d="M12 6v2M12 16v2" />
+        </svg>
+      ),
+    },
+    {
+      title: "Avg Monthly Bookings",
+      value: statistics.summary.averageMonthlyBookings,
+      accent: "amber",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+          <line x1="16" y1="2" x2="16" y2="6" />
+          <line x1="8" y1="2" x2="8" y2="6" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+        </svg>
+      ),
+    },
+    {
+      title: "Avg Monthly Revenue",
+      value: statistics.summary.averageMonthlyRevenue,
+      accent: "violet",
+      prefix: "$",
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.75}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 2v4M12 22v-4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M22 12h-4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      ),
+    },
+  ];
+};

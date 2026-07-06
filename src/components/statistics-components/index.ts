@@ -63,6 +63,31 @@ export {
   PeakSeasonTooltip,
   // Employee
   CustomSalaryTooltip,
+  // Bookings
+  PopularActivityTooltip,
+  TopTourTooltip,
+  FunnelTooltip,
+  StatusPieTooltip,
+  RevenueTrendTooltip,
+  BookingTrendTooltip,
+  // Booking Statuses
+  StatusDistributionTooltip,
+  TrendTooltip,
+  DropOffTooltip,
+  // Assign Bookings
+  EmployeeWorkloadTooltip,
+  EmployeeRevenueTooltip,
+  DepartmentTooltip,
+  DesignationTooltip,
+  AssignmentTrendTooltip,
+  AssignmentStatusTooltip,
+  // Booking History
+  BookingGrowthTooltip,
+  RevenueGrowthTooltip,
+  StatusHistoryTooltip,
+  CancellationTooltip,
+  CustomerReturnTooltip,
+  PeakPeriodTooltip,
 } from "./CustomTooltips";
 export { SectionHeader } from "./SectionHeader";
 export { Reveal } from "./Reveal";

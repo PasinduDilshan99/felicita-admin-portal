@@ -124,3 +124,30 @@ export const EMPLOYEE_PAGE_MANAGEMENT_PAGE_TITLE = "Employee Management";
 export const EMPLOYEE_VIEW_PAGE_TITLE = "Employees View";
 export const EMPLOYEE_DETAILS_VIEW_PAGE_TITLE = "Employee Details View";
 export const EMPLOYEE_CREATE_PAGE_TITLE = "Employee Create";
+
+// Bookings
+export const BOOKING_MANAGEMENT_PAGE_TITLE = "Booking Management";
+export const TOUR_BOOKINGS_PAGE_TITLE = "Booking Management";
+export const TOUR_BOOKINGS_VIEW_PAGE_TITLE = "Bookings View";
+export const TOUR_BOOKINGS_DETAILS_VIEW_PAGE_TITLE = "Booking Details View";
+export const TOUR_BOOKINGS_ADD_PAGE_TITLE = "Add New Booking";
+export const TOUR_BOOKINGS_UPDATE_PAGE_TITLE = "Update Booking";
+export const TOUR_BOOKINGS_CANCELED_PAGE_TITLE = "Canceled Booking";
+
+export const BOOKINGS_STATUS_PAGE_TITLE = "Booking Status Management";
+export const BOOKINGS_STATUS_VIEW_PAGE_TITLE = "Bookings Status View";
+export const BOOKINGS_STATUS_DETAILS_VIEW_PAGE_TITLE = "Booking Status Details View";
+export const BOOKINGS_STATUS_ADD_PAGE_TITLE = "Add New Booking Status";
+export const BOOKINGS_STATUS_UPDATE_PAGE_TITLE = "Update Booking Status";
+export const BOOKINGS_STATUS_TERMINATE_PAGE_TITLE = "Canceled Booking Status";
+
+export const BOOKINGS_ASSIGN_PAGE_TITLE = "Booking Assign Management";
+export const BOOKINGS_ASSIGN_VIEW_PAGE_TITLE = "Bookings Assign View";
+export const BOOKINGS_ASSIGN_DETAILS_VIEW_PAGE_TITLE = "Booking Assign Details View";
+export const BOOKINGS_ASSIGN_ADD_PAGE_TITLE = "Add New Booking Assign";
+export const BOOKINGS_ASSIGN_UPDATE_PAGE_TITLE = "Update Booking Assign";
+
+export const BOOKINGS_HISTORY_PAGE_TITLE = "Booking History Management";
+export const BOOKINGS_HISTORY_VIEW_PAGE_TITLE = "Bookings History View";
+export const BOOKINGS_HISTORY_DETAILS_VIEW_PAGE_TITLE = "Booking History Details View";
+

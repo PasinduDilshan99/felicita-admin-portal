@@ -715,7 +715,7 @@ export const BOOKING_STATUS_UPDATE_BREADCRUMB_DATA: breadcrumbType[] = [
   { label: "Update", href: URLS.BOOKING_STATUS_UPDATE_PAGE_URL },
 ];
 
-export const BOOKING_STATUS_TERMINATE_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+export const BOOKING_STATUS_TERMINATE_BREADCRUMB_DATA: breadcrumbType[] = [
   ...BOOKING_STATUS_HOME_BREADCRUMB_DATA,
   { label: "Terminate", href: URLS.BOOKING_STATUS_TERMINATE_PAGE_URL },
 ];

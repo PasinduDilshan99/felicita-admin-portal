@@ -8,6 +8,7 @@ import { BookingFilterParams } from "@/types/booking-types";
 import { CategoryFilterParams } from "@/types/destination-category-types";
 import { DestinationFilterParams } from "@/types/destination-types";
 import { EmployeeFilterParams } from "@/types/employee-types";
+import { HeroSectionFilterParamsWithType } from "@/types/hero-section-types";
 import { PackageScheduleFilterParams } from "@/types/package-schedule-types";
 import { PackageTypeFilterParams } from "@/types/package-type-types";
 import { PackageFilterParams } from "@/types/package-types";
@@ -927,5 +928,53 @@ export const bookingHistoryUrlParamsToFilters = (
       : 1,
     sortBy: params.get("sortBy") || null,
     sortDirection: params.get("sortDirection") || "ASC",
+  };
+};
+
+export const commonHeroSectionViewFiltersToUrlParams = (
+  filters: HeroSectionFilterParamsWithType,
+): URLSearchParams => {
+  const params = new URLSearchParams();
+
+  if (filters.name) params.set("name", filters.name);
+  if (filters.title) params.set("title", filters.title);
+  if (filters.subTitle) params.set("subTitle", filters.subTitle);
+  if (filters.description) params.set("description", filters.description);
+  if (filters.primaryButtonText)
+    params.set("primaryButtonText", filters.primaryButtonText);
+  if (filters.secondaryButtonText)
+    params.set("secondaryButtonText", filters.secondaryButtonText);
+  if (filters.status) params.set("status", filters.status);
+  if (filters.heroSectionType)
+    params.set("heroSectionType", filters.heroSectionType);
+  if (filters.pageSize) params.set("pageSize", filters.pageSize.toString());
+  if (filters.pageNumber && filters.pageNumber !== 1)
+    params.set("pageNumber", filters.pageNumber.toString());
+  if (filters.sortBy) params.set("sortBy", filters.sortBy);
+  if (filters.sortDirection) params.set("sortDirection", filters.sortDirection);
+
+  return params;
+};
+
+export const commonHeroSectionViewUrlParamsToFilters = (
+  params: URLSearchParams,
+): HeroSectionFilterParamsWithType => {
+  return {
+    name: params.get("name") || null,
+    heroSectionType: params.get("heroSectionType") || "",
+    title: params.get("title") || null,
+    subTitle: params.get("subTitle") || null,
+    description: params.get("description") || null,
+    primaryButtonText: params.get("primaryButtonText") || null,
+    secondaryButtonText: params.get("secondaryButtonText") || null,
+    status: params.get("status") || null,
+    pageSize: params.get("pageSize") ? parseInt(params.get("pageSize")!) : 6,
+    pageNumber: params.get("pageNumber")
+      ? parseInt(params.get("pageNumber")!)
+      : 1,
+    sortBy: params.get("sortBy") || "id",
+    sortDirection: (params.get("sortDirection") === "DESC" ? "DESC" : "ASC") as
+      | "ASC"
+      | "DESC",
   };
 };

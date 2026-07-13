@@ -182,3 +182,9 @@ export const BOOKING_HISTORY_VIEW_SORTING_OPTIONS = [
   { value: "finalAmount", label: "Final Amount" },
   { value: "bookingStatus", label: "Status" },
 ];
+
+export const COMMON_HERO_SECTION_VIEW_SORTING_OPTIONS = [
+  { value: "name", label: "Name" },
+  { value: "title", label: "Title" },
+  { value: "status", label: "Status" },
+];

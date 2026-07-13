@@ -850,14 +850,6 @@ export const webSiteContentManagementSideBarData: SideBarDataType[] = [
             privilege: PRIVILEGES.HOME_HERO_SECTION_VIEW_PRIVILEGE,
           },
           {
-            id: 1012,
-            name: "View Hero Section Details",
-            description: "View detailed hero section information",
-            color: "#93C5FD",
-            url: URLS.HOME_HERO_SECTION_DETAILS_VIEW_URL,
-            privilege: PRIVILEGES.HOME_HERO_SECTION_DETAILS_VIEW_PRIVILEGE,
-          },
-          {
             id: 1013,
             name: "Add Hero Section",
             description: "Add new homepage hero banner section",

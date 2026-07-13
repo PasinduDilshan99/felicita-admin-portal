@@ -156,6 +156,15 @@ export const GET_ACTIVE_VEHICLE_SPECIFICATION_HERO_SECTION_DATA_FE = `${API}${HE
 export const GET_ACTIVE_VEHICLE_TYPES_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/vehicle-types`;
 export const GET_ACTIVE_SEASONS_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/seasons`;
 
+
+export const GET_HERO_SECTION_BASIC_DETAILS_FOR_REQUEST_DATA_FE = `${API}${HERO_SECTION}/basic-details-for-request`;
+export const GET_HERO_SECTION_REQUEST_PARAM_DATA_FE = `${API}${HERO_SECTION}/data-for-request-params`;
+export const GET_HERO_SECTION_DETAILS_BY_ID_DATA_FE = `${API}${HERO_SECTION}/hero-section-details`;
+export const ADD_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/add-hero-section`;
+export const UPDATE_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/update-hero-section`;
+export const TERMINATE_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/terminate-hero-section`;
+export const GET_HERO_SECTION_STATISTICS_DATA_FE = `${API}${HERO_SECTION}/hero-section-statistics`;
+
 // Why Choose Us
 export const GET_ACTIVE_WHY_CHOOSE_US_DATA_FE = `${API}${WHY_CHOOSE_US}`;
 

@@ -1,5 +1,5 @@
 import ProtectedRoute from "@/components/ProtectedRoute";
-import HomePageHeroSectionPage from "@/pages/website-content-management/home-page/hero-section/HomePageHeroSectionPage";
+import HomePageHeroSectionDetailsViewPage from "@/pages/website-content-management/home-page/hero-section/HomePageHeroSectionDetailsViewPage";
 import { BOOKING_MANAGEMENT_PAGE_TITLE } from "@/utils/pagesHeaderTitles";
 import { BOOKING_MANAGEMENT_PRIVILEGE } from "@/utils/privileges";
 import { Metadata } from "next";
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <ProtectedRoute requiredPrivileges={[BOOKING_MANAGEMENT_PRIVILEGE]}>
-      <HomePageHeroSectionPage />
+      <HomePageHeroSectionDetailsViewPage />
     </ProtectedRoute>
   );
 };

@@ -13,11 +13,14 @@ import {
   TerminateHeroSectionRequest,
   HeroSectionStatisticsApiResponse,
   GetHeroSectionStatisticsRequest,
+  HeroSectionNameAndIdApiResponse,
+  GetHeroSectionNameAndIdRequest,
 } from "@/types/hero-section-types";
 import {
   ADD_HERO_SECTION_DATA_FE,
   GET_HERO_SECTION_BASIC_DETAILS_FOR_REQUEST_DATA_FE,
   GET_HERO_SECTION_DETAILS_BY_ID_DATA_FE,
+  GET_HERO_SECTION_NAME_AND_ID_DATA_FE,
   GET_HERO_SECTION_REQUEST_PARAM_DATA_FE,
   GET_HERO_SECTION_STATISTICS_DATA_FE,
   TERMINATE_HERO_SECTION_DATA_FE,
@@ -297,6 +300,41 @@ export class HeroSectionService {
       return data;
     } catch (error) {
       console.error("Error fetching hero section statistics:", error);
+      throw error;
+    }
+  }
+
+  static async getHeroSectionNameAndId(
+    heroSectionType: string,
+  ): Promise<HeroSectionNameAndIdApiResponse> {
+    try {
+      const requestBody: GetHeroSectionNameAndIdRequest = { heroSectionType };
+
+      const response = await fetch(GET_HERO_SECTION_NAME_AND_ID_DATA_FE, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(requestBody),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data: HeroSectionNameAndIdApiResponse = await response.json();
+
+      if (data.code !== 200) {
+        throw new Error(
+          data.message || "Failed to fetch hero section names and IDs",
+        );
+      }
+
+      return data;
+    } catch (error) {
+      console.error("Error fetching hero section names and IDs:", error);
       throw error;
     }
   }

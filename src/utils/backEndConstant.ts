@@ -188,6 +188,7 @@ export const ADD_HERO_SECTION_DATA = `${BASE_PATH}${API}${VERSION}${HERO_SECTION
 export const UPDATE_HERO_SECTION_DATA = `${BASE_PATH}${API}${VERSION}${HERO_SECTION}/update-hero-section`;
 export const TERMINATE_HERO_SECTION_DATA = `${BASE_PATH}${API}${VERSION}${HERO_SECTION}/terminate-hero-section`;
 export const GET_HERO_SECTION_STATISTICS_DATA = `${BASE_PATH}${API}${VERSION}${HERO_SECTION}/hero-section-statistics`;
+export const GET_HERO_SECTION_NAME_AND_ID_DATA = `${BASE_PATH}${API}${VERSION}${HERO_SECTION}/name-and-id`;
 
 // Why Choose Us
 export const GET_ACTIVE_WHY_CHOOSE_US_DATA = `${BASE_PATH}${API}${VERSION}${WHY_CHOOSE_US}/active`;

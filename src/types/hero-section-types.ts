@@ -229,3 +229,20 @@ export interface HeroSectionListCardProps {
   heroSectionType: string;
   heroSectionDetailsViewUrl: string;
 }
+
+// Add these to your existing types/hero-section-types.ts file
+
+// ============ Hero Section Name and ID ============
+export interface HeroSectionNameAndId {
+  id: number;
+  name: string;
+}
+
+export type HeroSectionNameAndIdApiResponse = ApiResponse<
+  HeroSectionNameAndId[]
+>;
+
+// ============ Get Hero Section Name and ID Request ============
+export interface GetHeroSectionNameAndIdRequest {
+  heroSectionType: string;
+}

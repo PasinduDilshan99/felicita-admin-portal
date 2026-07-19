@@ -164,6 +164,7 @@ export const ADD_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/add-hero-section`
 export const UPDATE_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/update-hero-section`;
 export const TERMINATE_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/terminate-hero-section`;
 export const GET_HERO_SECTION_STATISTICS_DATA_FE = `${API}${HERO_SECTION}/hero-section-statistics`;
+export const GET_HERO_SECTION_NAME_AND_ID_DATA_FE = `${API}${HERO_SECTION}/name-and-id`;
 
 // Why Choose Us
 export const GET_ACTIVE_WHY_CHOOSE_US_DATA_FE = `${API}${WHY_CHOOSE_US}`;

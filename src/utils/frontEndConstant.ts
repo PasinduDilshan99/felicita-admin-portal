@@ -42,6 +42,7 @@ const SEASONS = "/seasons";
 const PRIVILEGES = "/privileges";
 const ROLES = "/roles";
 const USERS = "/users";
+const EMAIL = "/email";
 
 // Auth
 export const LOGIN_FE = `${API}${AUTH}/login`;
@@ -462,3 +463,6 @@ export const GET_USER_BASIC_DETAILS_BY_USER_ID_DATA_FE = `${API}${USERS}/user-ba
 
 // Billings
 export const GET_BILLING_DETAILS_BY_BOOKING_ID_DATA_FE = `${API}${BOOKING}/booking-billing-details`;
+
+// Emails
+export const REQUEST_HOTEL_RATES_EMAILS_DATA_FE = `${API}${EMAIL}/request-hotel-rates`;

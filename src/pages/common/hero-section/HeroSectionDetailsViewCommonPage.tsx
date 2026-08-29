@@ -73,8 +73,9 @@ const HeroSectionDetailsViewCommonPage: React.FC<
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Add default value for breadcrumbData
   const breadcrumbItems = [
-    ...breadcrumbData,
+    ...(breadcrumbData || []), // Ensure it's always an array
     {
       label: heroSection?.name || "Details",
       href: `${viewUrl || ""}/${heroSectionId}`,
@@ -162,26 +163,26 @@ const HeroSectionDetailsViewCommonPage: React.FC<
   };
 
   // Prepare quick stats
-  const quickStats = [
-    {
-      label: "Hero Section Type",
-      value: heroSectionType,
-      icon: Tag,
-      color: theme.primary,
-    },
-    {
-      label: "Display Order",
-      value: heroSection?.order || 0,
-      icon: Clock,
-      color: theme.primary,
-    },
-    {
-      label: "Status",
-      value: heroSection?.status || "N/A",
-      icon: heroSection?.status === "ACTIVE" ? CheckCircle : AlertCircle,
-      color: heroSection?.status === "ACTIVE" ? theme.success : theme.warning,
-    },
-  ];
+ const quickStats = [
+  {
+    label: "Hero Section Type",
+    value: heroSectionType || "N/A", // Add fallback
+    icon: Tag,
+    color: theme.primary,
+  },
+  {
+    label: "Display Order",
+    value: heroSection?.order ?? 0, // Use nullish coalescing
+    icon: Clock,
+    color: theme.primary,
+  },
+  {
+    label: "Status",
+    value: heroSection?.status || "N/A",
+    icon: heroSection?.status === "ACTIVE" ? CheckCircle : AlertCircle,
+    color: heroSection?.status === "ACTIVE" ? theme.success : theme.warning,
+  },
+];
 
   // Prepare metadata items
   const metadataItems = [

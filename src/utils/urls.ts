@@ -413,3 +413,14 @@ export const CONTACT_CALL_TO_ACTION_TERMINATE_URL = `${CONTACT_CALL_TO_ACTION_UR
 
 export const BILLING_PAGE_URL = `${PAYMENT_MANAGEMENT_URL}/billing`;
 export const BILLING_VIEW_PAGE_URL = `${BILLING_PAGE_URL}/view`;
+
+// ==================== HOTEL MANAGEMENT ====================
+// Hotel Rates
+export const HOTEL_RATES_PAGE_URL = `${HOTEL_MANAGEMENT_URL}/hotel-rates`;
+export const HOTEL_RATES_VIEW_PAGE_URL = `${HOTEL_RATES_PAGE_URL}/view`;
+export const HOTEL_RATES_DETAILS_VIEW_URL = `${HOTEL_RATES_VIEW_PAGE_URL}`;
+export const HOTEL_RATES_ADD_PAGE_URL = `${HOTEL_RATES_PAGE_URL}/add-new`;
+export const HOTEL_RATES_UPDATE_PAGE_URL = `${HOTEL_RATES_PAGE_URL}/update`;
+export const HOTEL_RATES_REQUEST_PAGE_URL = `${HOTEL_RATES_PAGE_URL}/request`;
+export const HOTEL_RATES_REMOVE_PAGE_URL = `${HOTEL_RATES_PAGE_URL}/remove`;
+export const HOTEL_RATES_COMPARE_PAGE_URL = `${HOTEL_RATES_PAGE_URL}/compare`;

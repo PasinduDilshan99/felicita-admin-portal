@@ -155,7 +155,7 @@ const HeroSectionStatisticsCommonPage: React.FC<
       if (response.data) setStatistics(response.data);
     } catch {
       setError(
-        `We couldn't load the ${title.toLowerCase()} statistics. Please try again.`,
+        `We couldn't load the ${title?.toLowerCase()} statistics. Please try again.`,
       );
     } finally {
       setLoading(false);
@@ -221,7 +221,7 @@ const HeroSectionStatisticsCommonPage: React.FC<
   if (loading) {
     return (
       <CommonLoading
-        message={`Loading ${title.toLowerCase()} statistics...`}
+        message={`Loading ${title?.toLowerCase()} statistics...`}
         subMessage={title}
         fullScreen
       />
@@ -337,7 +337,7 @@ const HeroSectionStatisticsCommonPage: React.FC<
               <section>
                 <SectionHeader
                   title="Quick Actions"
-                  subtitle={`Manage ${title.toLowerCase()} sections`}
+                  subtitle={`Manage ${title?.toLowerCase()} sections`}
                   badge={`${actions.length} actions`}
                   prefix="hs"
                 />
@@ -385,7 +385,7 @@ const HeroSectionStatisticsCommonPage: React.FC<
                 <section className="hs-mt-8">
                   <SectionHeader
                     title="Overview"
-                    subtitle={`Key metrics for ${title.toLowerCase()}`}
+                    subtitle={`Key metrics for ${title?.toLowerCase()}`}
                     badge="Live"
                     live
                     prefix="hs"
@@ -864,7 +864,7 @@ const HeroSectionStatisticsCommonPage: React.FC<
               <section className="hs-mt-7">
                 <InfoBanner
                   title={`${title} Management`}
-                  description={`Manage and analyze ${title.toLowerCase()} performance. Track status distribution, monthly trends, creation/update activity, and top editors. Use the quick actions above to create, edit, or manage ${title.toLowerCase()} sections. All statistics reflect real-time data from your backend.`}
+                  description={`Manage and analyze ${title?.toLowerCase()} performance. Track status distribution, monthly trends, creation/update activity, and top editors. Use the quick actions above to create, edit, or manage ${title?.toLowerCase()} sections. All statistics reflect real-time data from your backend.`}
                   prefix="hs"
                 />
               </section>

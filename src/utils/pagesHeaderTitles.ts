@@ -151,3 +151,15 @@ export const BOOKINGS_HISTORY_PAGE_TITLE = "Booking History Management";
 export const BOOKINGS_HISTORY_VIEW_PAGE_TITLE = "Bookings History View";
 export const BOOKINGS_HISTORY_DETAILS_VIEW_PAGE_TITLE = "Booking History Details View";
 
+// =========================================================
+// HOTEL MANAGEMENT PAGE TITLES
+// =========================================================
+export const HOTEL_MANAGEMENT_PAGE_TITLE = "Hotel Management";
+export const HOTEL_RATES_PAGE_TITLE = "Hotel Rates";
+export const HOTEL_RATES_VIEW_PAGE_TITLE = "View Hotel Rates";
+export const HOTEL_RATES_DETAILS_VIEW_PAGE_TITLE = "Hotel Rate Details";
+export const HOTEL_RATES_CREATE_PAGE_TITLE = "Add New Hotel Rate";
+export const HOTEL_RATES_UPDATE_PAGE_TITLE = "Update Hotel Rate";
+export const HOTEL_RATES_REQUEST_PAGE_TITLE = "Request Hotel Rate";
+export const HOTEL_RATES_TERMINATE_PAGE_TITLE = "Remove Hotel Rate";
+export const HOTEL_RATES_COMPARE_PAGE_TITLE = "Compare Hotel Rates";

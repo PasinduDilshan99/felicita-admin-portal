@@ -2295,3 +2295,64 @@ export const paymentManagementSideBarData: SideBarDataType[] = [
     ],
   },
 ];
+
+export const hotelManagementSideBarData: SideBarDataType[] = [
+  {
+    id: 1,
+    name: "Hotel Rates",
+    description: "Manage hotel rates and pricing information",
+    color: "#3B82F6",
+    url: URLS.HOTEL_RATES_PAGE_URL,
+    privilege: PRIVILEGES.HOTEL_RATES_PRIVILEGE,
+    subData: [
+      {
+        id: 101,
+        name: "View Hotel Rates",
+        description: "View all hotel rates and pricing details",
+        color: "#60A5FA",
+        url: URLS.HOTEL_RATES_VIEW_PAGE_URL,
+        privilege: PRIVILEGES.HOTEL_RATES_VIEW_PRIVILEGE,
+      },
+      {
+        id: 102,
+        name: "Add Hotel Rate",
+        description: "Create and add new hotel rates",
+        color: "#34D399",
+        url: URLS.HOTEL_RATES_ADD_PAGE_URL,
+        privilege: PRIVILEGES.HOTEL_RATES_CREATE_PRIVILEGE,
+      },
+      {
+        id: 103,
+        name: "Update Hotel Rate",
+        description: "Edit and update existing hotel rates",
+        color: "#FBBF24",
+        url: URLS.HOTEL_RATES_UPDATE_PAGE_URL,
+        privilege: PRIVILEGES.HOTEL_RATES_UPDATE_PRIVILEGE,
+      },
+      {
+        id: 104,
+        name: "Request Hotel Rate",
+        description: "Request new hotel rates or rate changes",
+        color: "#8B5CF6",
+        url: URLS.HOTEL_RATES_REQUEST_PAGE_URL,
+        privilege: PRIVILEGES.HOTEL_RATES_REQUEST_PRIVILEGE,
+      },
+      {
+        id: 105,
+        name: "Remove Hotel Rate",
+        description: "Delete or terminate hotel rates",
+        color: "#EF4444",
+        url: URLS.HOTEL_RATES_REMOVE_PAGE_URL,
+        privilege: PRIVILEGES.HOTEL_RATES_TERMINATE_PRIVILEGE,
+      },
+      {
+        id: 106,
+        name: "Compare Hotel Rates",
+        description: "Compare different hotel rates and pricing",
+        color: "#F97316",
+        url: URLS.HOTEL_RATES_COMPARE_PAGE_URL,
+        privilege: PRIVILEGES.HOTEL_RATES_COMPARE_PRIVILEGE,
+      },
+    ],
+  },
+];

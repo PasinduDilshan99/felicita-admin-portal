@@ -801,3 +801,52 @@ export const HOME_PAGE_HERO_SECTION_TERMINATE_BREADCRUMB_DATA: breadcrumbType[] 
     ...HOME_PAGE_HERO_SECTION_MANAGEMENT_BREADCRUMB_DATA,
     { label: "Terminate", href: URLS.HOME_HERO_SECTION_TERMINATE_URL },
   ];
+
+  // =========================================================
+// HOTEL MANAGEMENT BREADCRUMBS
+// =========================================================
+
+// Hotel Management Home
+export const HOTEL_MANAGEMENT_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  { label: "Hotel Management", href: URLS.HOTEL_MANAGEMENT_URL },
+];
+
+// Hotel Rates
+export const HOTEL_RATES_HOME_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...HOTEL_MANAGEMENT_HOME_BREADCRUMB_DATA,
+  { label: "Hotel Rates", href: URLS.HOTEL_RATES_PAGE_URL },
+];
+
+export const HOTEL_RATES_VIEW_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...HOTEL_RATES_HOME_BREADCRUMB_DATA,
+  { label: "View", href: URLS.HOTEL_RATES_VIEW_PAGE_URL },
+];
+
+export const HOTEL_RATES_DETAILS_VIEW_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...HOTEL_RATES_VIEW_BREADCRUMB_DATA,
+];
+
+export const HOTEL_RATES_ADD_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...HOTEL_RATES_HOME_BREADCRUMB_DATA,
+  { label: "Add New", href: URLS.HOTEL_RATES_ADD_PAGE_URL },
+];
+
+export const HOTEL_RATES_UPDATE_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...HOTEL_RATES_HOME_BREADCRUMB_DATA,
+  { label: "Update", href: URLS.HOTEL_RATES_UPDATE_PAGE_URL },
+];
+
+export const HOTEL_RATES_REQUEST_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...HOTEL_RATES_HOME_BREADCRUMB_DATA,
+  { label: "Request", href: URLS.HOTEL_RATES_REQUEST_PAGE_URL },
+];
+
+export const HOTEL_RATES_REMOVE_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...HOTEL_RATES_HOME_BREADCRUMB_DATA,
+  { label: "Remove", href: URLS.HOTEL_RATES_REMOVE_PAGE_URL },
+];
+
+export const HOTEL_RATES_COMPARE_BREADCRUMB_DATA: breadcrumbType[] = [
+  ...HOTEL_RATES_HOME_BREADCRUMB_DATA,
+  { label: "Compare", href: URLS.HOTEL_RATES_COMPARE_PAGE_URL },
+];

@@ -234,7 +234,7 @@ const HeroSectionTerminateCommonPage: React.FC<
     return (
       <CommonLoading
         message={`Loading ${heroSectionType} hero sections...`}
-        subMessage={`Please wait while we fetch available ${heroSectionType.toLowerCase()} hero sections`}
+        subMessage={`Please wait while we fetch available ${heroSectionType?.toLowerCase()} hero sections`}
         size="lg"
         fullScreen={true}
       />
@@ -269,7 +269,7 @@ const HeroSectionTerminateCommonPage: React.FC<
         <div className="mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <PageHeader
             title={`Terminate ${heroSectionType} Hero Section`}
-            description={`Permanently remove a ${heroSectionType.toLowerCase()} hero section from the system`}
+            description={`Permanently remove a ${heroSectionType?.toLowerCase()} hero section from the system`}
             breadcrumbItems={breadcrumbData}
           />
         </div>
@@ -324,7 +324,7 @@ const HeroSectionTerminateCommonPage: React.FC<
                 onSelectItem={(item) => handleSelectHero(item.id, item.name)}
                 onClearSelection={handleClearHeroSelection}
                 initialSearchTerm={initialHeroName}
-                placeholder={`Search ${heroSectionType.toLowerCase()} hero sections...`}
+                placeholder={`Search ${heroSectionType?.toLowerCase()} hero sections...`}
                 title={`${heroSectionType} Hero Sections`}
                 variant="error"
                 size="md"

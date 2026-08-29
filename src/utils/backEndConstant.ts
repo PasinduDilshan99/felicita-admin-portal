@@ -1,11 +1,11 @@
 // DEV
-const PROTOCOL = "http";
-const DOMAIN = "localhost";
-const PORT = "8080";
-const CONTEXT_ROOT = "felicita";
-const VERSION = "/v0";
-const API = "/api";
-export const BASE_PATH = `${PROTOCOL}://${DOMAIN}:${PORT}/${CONTEXT_ROOT}`;
+// const PROTOCOL = "http";
+// const DOMAIN = "localhost";
+// const PORT = "8080";
+// const CONTEXT_ROOT = "felicita";
+// const VERSION = "/v0";
+// const API = "/api";
+// export const BASE_PATH = `${PROTOCOL}://${DOMAIN}:${PORT}/${CONTEXT_ROOT}`;
 
 // Staging
 // const PROTOCOL = "https";
@@ -17,13 +17,13 @@ export const BASE_PATH = `${PROTOCOL}://${DOMAIN}:${PORT}/${CONTEXT_ROOT}`;
 // export const BASE_PATH = `${PROTOCOL}://${DOMAIN}/${CONTEXT_ROOT}`;
 
 // Production
-// const PROTOCOL = "https";
-// const DOMAIN = "api.felicitatrips.com"; // production backend domain
-// const PORT = "443"; // if using HTTPS (omit port in URL)
-// const CONTEXT_ROOT = "felicita";
-// const VERSION = "/v0";
-// const API = "/api";
-// export const BASE_PATH = `${PROTOCOL}://${DOMAIN}/${CONTEXT_ROOT}`;
+const PROTOCOL = "https";
+const DOMAIN = "api.felicitatrips.com"; // production backend domain
+const PORT = "443"; // if using HTTPS (omit port in URL)
+const CONTEXT_ROOT = "felicita";
+const VERSION = "/v0";
+const API = "/api";
+export const BASE_PATH = `${PROTOCOL}://${DOMAIN}/${CONTEXT_ROOT}`;
 
 // http://159.198.43.146:8080/felicita
 const LINK_BAR = "/link-bar";
@@ -67,6 +67,7 @@ const SEASONS = "/seasons";
 const PRIVILEGES = "/privileges";
 const ROLES = "/roles";
 const USERS = "/users";
+const EMAIL = "/email";
 
 // Auth
 export const LOGIN = `${BASE_PATH}${API}${VERSION}${AUTH}/login`;
@@ -492,3 +493,6 @@ export const GET_USER_BASIC_DETAILS_BY_USER_ID_DATA = `${BASE_PATH}${API}${VERSI
 
 // Billings
 export const GET_BILLING_DETAILS_BY_BOOKING_ID_DATA = `${BASE_PATH}${API}${VERSION}${BOOKING}/booking-billing-details`;
+
+// Emails
+export const REQUEST_HOTEL_RATES_EMAILS_DATA = `${BASE_PATH}${API}${VERSION}${EMAIL}/request-hotel-rates`;

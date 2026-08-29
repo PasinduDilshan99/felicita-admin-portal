@@ -71,6 +71,11 @@ export interface SeasonType {
   seasonImages: Image[];
 }
 
+export interface StatusType {
+  statusId: number;
+  statusName: string;
+  statusDescription: string;
+}
 
 /* ================= FULL RESPONSE DATA ================= */
 
@@ -81,6 +86,7 @@ export interface AllCategoriesData {
   packageCategoryList: PackageCategory[];
   tourTypeList: TourType[];
   seasonsList: SeasonType[];
+  statusList: StatusType[];
 }
 
 /* ================= API WRAPPER RESPONSE ================= */

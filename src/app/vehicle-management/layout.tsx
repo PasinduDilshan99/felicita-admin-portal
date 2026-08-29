@@ -1,5 +1,6 @@
 // app/travel-management/layout.tsx
-import Sidebar from "@/components/common-components/SideBar";
+import Sidebar from "@/components/common-components/static-components/SideBar";
+import { contentManagementSideBarData } from "@/data/side-bar-data";
 import React from "react";
 
 // Sidebar data for travel management
@@ -209,7 +210,7 @@ export default function VehicleManagementLayout({
     <div className="min-h-screen bg-[#F1F5F9]">
       <div className="flex">
         {/* Sidebar - Handles its own positioning */}
-        <Sidebar data={vehicleManagementSideBarData} title="Vehicle Management" />
+        <Sidebar data={contentManagementSideBarData} title="Vehicle Management" />
 
         {/* Main Content Area */}
         <main className="flex-1 w-full min-h-screen lg:ml-0">

@@ -1,6 +1,6 @@
 // types/activity-types.ts - Updated types
 
-import { ApiResponse } from "./common-types";
+import { ApiResponse, SeasonType } from "./common-types";
 
 // Category Interface for Add/Update
 export interface ActivityCategory {
@@ -45,7 +45,7 @@ export interface Activity {
   requirements: Requirement[];
   images: ActivityImage[];
   destination_id: number;
-  categories: ActivityCategoryDetail[];
+  activities_category: ActivityCategoryFullDetail[];
   duration_hours: number;
   available_from: string;
   available_to: string;
@@ -69,7 +69,7 @@ export interface Schedule {
   special_note: string;
 }
 
-export interface ActivityCategoryDetail {
+export interface ActivityCategoryFullDetail {
   id: number;
   name: string;
   description: string;
@@ -215,20 +215,20 @@ export interface UpdateActivityRequest {
   maxParticipate: number;
   seasonId: number;
   status: "ACTIVE" | "INACTIVE";
-  
+
   // Category operations
   removeCategoryIds: number[];
   addCategories: AddCategoryRequest[];
   updatedCategories: UpdateCategoryRequest[];
-  
+
   // Image operations
   removeImagesIds: number[];
-  addImages: UpdateImageRequest[];
+  addImages: ActivityImageRequest[];
   updatedImages: UpdateImageRequest[];
-  
+
   // Requirement operations
   removeRequirementsIds: number[];
-  addRequirements: UpdateRequirementRequest[];
+  addRequirements: ActivityRequirementRequest[];
   updatedRequirements: UpdateRequirementRequest[];
 }
 
@@ -317,7 +317,7 @@ export interface ActivityWishDetails {
   notWishListCount: number;
 }
 
-export interface ActivityCategoryDetail {
+export interface ActivityCategoryDetailForStatistics {
   categoryId: number;
   categoryName: string;
   count: number;
@@ -326,7 +326,7 @@ export interface ActivityCategoryDetail {
 export interface ActivityStatisticsData {
   activityDetails: ActivityDetails;
   wishDetails: ActivityWishDetails;
-  categoryDetails: ActivityCategoryDetail[];
+  categoryDetails: ActivityCategoryDetailForStatistics[];
 }
 
 export interface ActivityStatisticsApiResponse {
@@ -389,7 +389,8 @@ export interface ActivityScheduleStatisticsData {
   summary: ActivityScheduleSummary;
 }
 
-export type ActivityScheduleStatisticsApiResponse = ApiResponse<ActivityScheduleStatisticsData>;
+export type ActivityScheduleStatisticsApiResponse =
+  ApiResponse<ActivityScheduleStatisticsData>;
 
 export interface CategoryActivityCount {
   categoryId: number;
@@ -437,7 +438,8 @@ export interface ActivityCategoriesStatisticsData {
   summary: ActivityCategoriesSummary;
 }
 
-export type ActivityCategoriesStatisticsApiResponse = ApiResponse<ActivityCategoriesStatisticsData>;
+export type ActivityCategoriesStatisticsApiResponse =
+  ApiResponse<ActivityCategoriesStatisticsData>;
 
 // Add these to your existing types/activity-types.ts file
 
@@ -474,9 +476,102 @@ export interface ActivityByDestination {
   images: ActivityImageDetail[];
 }
 
-export type ActivitiesByDestinationResponse = ApiResponse<ActivityByDestination[]>;
+export type ActivitiesByDestinationResponse = ApiResponse<
+  ActivityByDestination[]
+>;
 
 // Request type
 export interface GetActivitiesByDestinationRequest {
   destinationId: number;
+}
+
+export interface ActivityCardProps {
+  activity: Activity;
+  onImageClick?: (imageIndex: number) => void;
+}
+
+export interface ActivityListCardProps {
+  activity: Activity;
+  onImageClick?: (imageIndex: number) => void;
+}
+
+export interface ActivityOverviewProps {
+  name: string;
+  description: string;
+  destinationName: string;
+  destinationId: number;
+  availableFrom: string;
+  availableTo: string;
+  durationHours: number;
+  seasonName?: string;
+  onViewDestination: () => void;
+}
+export interface ActivityPricingProps {
+  priceLocal: number;
+  priceForeigners: number;
+  minParticipants: number;
+  maxParticipants: number;
+}
+
+export interface ActivityScheduleListProps {
+  schedules: Schedule[];
+}
+
+export interface ActivityRequirementsProps {
+  requirements: Requirement[];
+}
+
+export interface ActivityCategoriesProps {
+  categories: ActivityCategoryFullDetail[];
+}
+
+export interface ActivityQuickStatsProps {
+  totalSchedules: number;
+  totalRequirements: number;
+  totalImages: number;
+  durationHours: number;
+  priceRange: string;
+  seasonName?: string;
+  status: string;
+}
+
+export interface BasicInfoFormProps {
+  activity: Activity;
+  hasChanged: (field: string) => boolean;
+  onFieldChange: (field: string, value: any) => void;
+  availableSeasons: SeasonType[];
+}
+
+export interface ActivitySearchItem {
+  id: number;
+  name: string;
+}
+
+export interface TerminationImage {
+  id: number | string;
+  url: string;
+  name: string;
+  description?: string;
+}
+
+export interface ImagesPanelProps {
+  images: TerminationImage[];
+  onImageClick?: (index: number) => void;
+  title?: string;
+  showDeletionBadge?: boolean;
+  deletionBadgeText?: string;
+  maxDisplayCount?: number;
+  emptyMessage?: string;
+}
+
+export interface CategoriesListProps {
+  categories: ActivityCategoryFullDetail[];
+}
+
+export interface SchedulesListProps {
+  schedules: Schedule[];
+}
+
+export interface RequirementsListProps {
+  requirements: Requirement[];
 }

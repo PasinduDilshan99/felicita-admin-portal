@@ -16,12 +16,17 @@ import {
   PackageStatisticsApiResponse,
   PackageScheduleStatisticsApiResponse,
   PackageTypeStatisticsApiResponse,
+  GetPackageParametersRequest,
+  PackageParametersApiResponse,
+  PackageRequestParamsApiResponse,
 } from "@/types/package-types";
 import {
   CREATE_PACKAGE_DATA_FE,
   GET_PACKAGE_ALL_DETAILS_BY_ID_DATA_FE,
   GET_PACKAGE_DETAILS_BY_ID_DATA_FE,
   GET_PACKAGE_NAMES_AND_IDS_DATA_FE,
+  GET_PACKAGE_PARAMETERS_DATA_FE,
+  GET_PACKAGE_REQUEST_PARAMS_DATA_FE,
   GET_PACKAGE_SCHEDULE_STATISTICS_DATA_FE,
   GET_PACKAGE_STATISTICS_DATA_FE,
   GET_PACKAGE_TYPE_STATISTICS_DATA_FE,
@@ -464,4 +469,70 @@ export class PackageService {
       throw error;
     }
   }
+
+  static async getPackageParameters(
+    tourId: number,
+  ): Promise<PackageParametersApiResponse> {
+    try {
+      const requestBody: GetPackageParametersRequest = { tourId };
+
+      const response = await fetch(GET_PACKAGE_PARAMETERS_DATA_FE, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(requestBody),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data: PackageParametersApiResponse = await response.json();
+
+      if (data.code !== 200) {
+        throw new Error(data.message || "Failed to fetch package parameters");
+      }
+
+      return data;
+    } catch (error) {
+      console.error("Error fetching package parameters:", error);
+      throw error;
+    }
+  }
+
+
+/**
+ * Get package request parameters (min/max price, durations, locations, group sizes, date range)
+ * Useful for populating filter dropdowns and range inputs
+ */
+static async getPackageRequestParams(): Promise<PackageRequestParamsApiResponse> {
+  try {
+    const response = await fetch(GET_PACKAGE_REQUEST_PARAMS_DATA_FE, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      credentials: "include",
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data: PackageRequestParamsApiResponse = await response.json();
+
+    if (data.code !== 200) {
+      throw new Error(data.message || "Failed to fetch package request parameters");
+    }
+
+    return data;
+  } catch (error) {
+    console.error("Error fetching package request parameters:", error);
+    throw error;
+  }
+}
 }

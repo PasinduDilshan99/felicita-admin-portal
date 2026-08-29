@@ -42,6 +42,7 @@ const SEASONS = "/seasons";
 const PRIVILEGES = "/privileges";
 const ROLES = "/roles";
 const USERS = "/users";
+const EMAIL = "/email";
 
 // Auth
 export const LOGIN_FE = `${API}${AUTH}/login`;
@@ -92,6 +93,43 @@ export const GET_PENDING_BOOKINGS_DETAILS_DATA_FE = `${API}${BOOKING}/pending`;
 export const INSERT_BOOKINGS_INQUIRY_DETAILS_DATA_FE = `${API}${BOOKING}/insert-booking-inquiry`;
 export const CANCELLED_PENDING_BOOKINGS_DETAILS_DATA_FE = `${API}${BOOKING}/pending/cancelled`;
 
+export const GET_BOOKINGS_ID_AND_REFERENCES_DATA_FE = `${API}${BOOKING}/booking-id-and-references`;
+export const GET_BOOKINGS_STATISTICS_DATA_FE = `${API}${BOOKING}/booking-statistics`;
+export const GET_BOOKINGS_FOR_REQUEST_DATA_FE = `${API}${BOOKING}/bookings`;
+export const GET_BOOKINGS_REQUEST_PARAM_DATA_FE = `${API}${BOOKING}/bookings-request-params`;
+export const GET_BOOKING_ALL_DETAILS_BY_ID_DATA_FE = `${API}${BOOKING}/booking-all-details`;
+export const ADD_BOOKING_DATA_FE = `${API}${BOOKING}/create-booking`;
+export const UPDATE_BOOKING_DATA_FE = `${API}${BOOKING}/update-booking`;
+export const GET_BOOKING_BASIC_DETAILS_BY_ID_DATA_FE = `${API}${BOOKING}/booking-basic-details`;
+export const UPDATE_BOOKING_STATUS_DATA_FE = `${API}${BOOKING}/update-booking-status`;
+export const TERMINATE_BOOKING_BY_ID_DATA_FE = `${API}${BOOKING}/terminate-booking`;
+export const GET_CREATE_BOOKINGS_PARAMS_DATA_FE = `${API}${BOOKING}/create-booking-params`;
+
+// Booking Statuses
+export const GET_BOOKINGS_STATUSES_STATISTICS_DATA_FE = `${API}${BOOKING}/status/booking-status-statistics`;
+export const GET_BOOKINGS_STATUSES_DATA_FE = `${API}${BOOKING}/status/bookings-statuses`;
+export const GET_BOOKINGS_STATUS_BASIC_DETAILS_BY_ID_DATA_FE = `${API}${BOOKING}/status/bookings-statuses-basic-details`;
+export const GET_BOOKINGS_STATUS_ALL_DETAILS_BY_ID_DATA_FE = `${API}${BOOKING}/status/bookings-statuses-all-details`;
+export const ADD_BOOKINGS_STATUS_DATA_FE = `${API}${BOOKING}/status/create-bookings-statuses`;
+export const UPDATE_BOOKINGS_STATUS_DATA_FE = `${API}${BOOKING}/status/update-bookings-statuses`;
+export const TERMINATE_BOOKINGS_STATUS_DATA_FE = `${API}${BOOKING}/status/terminate-bookings-statuses`;
+export const GET_BOOKING_STATUS_ID_AND_NAMES_FE = `${API}${BOOKING}/status/bookings-statuses-id-and-names`;
+
+// Booking Assigns
+export const GET_BOOKINGS_ASSIGN_STATISTICS_DATA_FE = `${API}${BOOKING}/assign/booking-assign-statistics`;
+export const GET_UNASSIGN_BOOKINGS_DATA_FE = `${API}${BOOKING}/assign/unassign-bookings`;
+export const GET_UNASSIGN_BOOKINGS_REQUEST_PARAM_DATA_FE = `${API}${BOOKING}/assign/unassign-bookings-request-params`;
+export const GET_UNASSIGN_BOOKINGS_LIST_DATA_FE = `${API}${BOOKING}/assign/unassign-booking-list`;
+export const GET_ASSIGN_BOOKINGS_LIST_DATA_FE = `${API}${BOOKING}/assign/assign-booking-list`;
+export const ASSIGN_UNASSIGN_BOOKING_DATA_FE = `${API}${BOOKING}/assign/assigned-unassign-booking`;
+export const UPDATE_UNASSIGN_BOOKING_DATA_FE = `${API}${BOOKING}/assign/update-unassign-booking`;
+
+// Booking History
+export const GET_BOOKINGS_HISTORY_STATISTICS_DATA_FE = `${API}${BOOKING}/history/booking-history-statistics`;
+export const GET_BOOKINGS_HISTORY_DATA_FE = `${API}${BOOKING}/history/bookings-history`;
+export const GET_BOOKINGS_HISTORY_REQUEST_PARAM_DATA_FE = `${API}${BOOKING}/history/bookings-history-request-params`;
+export const GET_BOOKINGS_HISTORY_DETAILS_DATA_FE = `${API}${BOOKING}/history/bookings-history-details`;
+
 // User Benefits
 export const GET_ALL_ACTIVE_USER_BENEFITS_FE = `${API}${USER_BENEFITS}`;
 export const GET_USER_PROFILE_USER_BENEFITS_DATA_FE = `${API}${USER_BENEFITS}/user-profile`;
@@ -118,6 +156,16 @@ export const GET_ACTIVE_VEHICLE_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/ve
 export const GET_ACTIVE_VEHICLE_SPECIFICATION_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/vehicle-specification`;
 export const GET_ACTIVE_VEHICLE_TYPES_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/vehicle-types`;
 export const GET_ACTIVE_SEASONS_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/seasons`;
+
+
+export const GET_HERO_SECTION_BASIC_DETAILS_FOR_REQUEST_DATA_FE = `${API}${HERO_SECTION}/basic-details-for-request`;
+export const GET_HERO_SECTION_REQUEST_PARAM_DATA_FE = `${API}${HERO_SECTION}/data-for-request-params`;
+export const GET_HERO_SECTION_DETAILS_BY_ID_DATA_FE = `${API}${HERO_SECTION}/hero-section-details`;
+export const ADD_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/add-hero-section`;
+export const UPDATE_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/update-hero-section`;
+export const TERMINATE_HERO_SECTION_DATA_FE = `${API}${HERO_SECTION}/terminate-hero-section`;
+export const GET_HERO_SECTION_STATISTICS_DATA_FE = `${API}${HERO_SECTION}/hero-section-statistics`;
+export const GET_HERO_SECTION_NAME_AND_ID_DATA_FE = `${API}${HERO_SECTION}/name-and-id`;
 
 // Why Choose Us
 export const GET_ACTIVE_WHY_CHOOSE_US_DATA_FE = `${API}${WHY_CHOOSE_US}`;
@@ -176,6 +224,32 @@ export const GET_TOUR_SCHEDULE_STATISTICS_DATA_FE = `${API}${TOUR}/tour-schedule
 export const GET_TOUR_CATEGORY_STATISTICS_DATA_FE = `${API}${TOUR}/tour-category-statistics`;
 export const GET_TOUR_TYPE_STATISTICS_DATA_FE = `${API}${TOUR}/tour-type-statistics`;
 export const GET_TOUR_DETAILS_FOR_PACKAGE_DATA_FE = `${API}${TOUR}/tour-details-for-add-package`;
+export const GET_TOUR_REQUEST_PARAMS_DATA_FE = `${API}${TOUR}/params-for-tour-request`;
+
+// Tour Types
+export const GET_TOUR_TYPES_DATA_FE = `${API}${TOUR}/tour-types`;
+export const GET_TOUR_TYPE_DETAILS_BY_ID_DATA_FE = `${API}${TOUR}/types/details`;
+export const GET_TOUR_TYPE_BASIC_DETAILS_BY_ID_DATA_FE = `${API}${TOUR}/types/basic-details`;
+export const ADD_TOUR_TYPE_DATA_FE = `${API}${TOUR}/types/add`;
+export const UPDATE_TOUR_TYPE_DATA_FE = `${API}${TOUR}/types/update`;
+export const TERMINATE_TOUR_TYPE_DATA_FE = `${API}${TOUR}/types/terminate`;
+
+// Tour Category
+export const GET_TOUR_CATEGORY_DATA_FE = `${API}${TOUR}/categories`;
+export const GET_TOUR_CATEGORY_DETAILS_BY_ID_DATA_FE = `${API}${TOUR}/categories/details`;
+export const GET_TOUR_CATEGORY_BASIC_DETAILS_BY_ID_DATA_FE = `${API}${TOUR}/categories/basic-details`;
+export const ADD_TOUR_CATEGORY_DATA_FE = `${API}${TOUR}/categories/add`;
+export const UPDATE_TOUR_CATEGORY_DATA_FE = `${API}${TOUR}/categories/update`;
+export const TERMINATE_TOUR_CATEGORY_DATA_FE = `${API}${TOUR}/categories/terminate`;
+
+// Tour Schedule
+export const GET_TOUR_SCHEDULE_DATA_FE = `${API}${TOUR}/schedules`;
+export const GET_TOUR_SCHEDULE_PARAMS_FOR_REQUEST_DATA_FE = `${API}${TOUR}/schedules/params`;
+export const GET_TOUR_SCHEDULE_DETAILS_BY_ID_DATA_FE = `${API}${TOUR}/schedules/details`;
+export const ADD_TOUR_SCHEDULE_DATA_FE = `${API}${TOUR}/schedules/add`;
+export const UPDATE_TOUR_SCHEDULE_DATA_FE = `${API}${TOUR}/schedules/update`;
+export const TERMINATE_TOUR_SCHEDULE_DATA_FE = `${API}${TOUR}/schedules/terminate`;
+export const GET_TOUR_SCHEDULE_ID_AND_NAMES_DATA_FE = `${API}${TOUR}/schedules/tour-schedule-id-and-names`;
 
 // Packages
 export const GET_ALL_PACKAGES_DETAILS_DATA_FE = `${API}${PACKAGES}`;
@@ -199,14 +273,31 @@ export const GET_PACKAGE_NAMES_AND_IDS_DATA_FE = `${API}${PACKAGES}/packageId-an
 export const GET_PACKAGE_STATISTICS_DATA_FE = `${API}${PACKAGES}/package-statistics`;
 export const GET_PACKAGE_SCHEDULE_STATISTICS_DATA_FE = `${API}${PACKAGES}/package-schedule-statistics`;
 export const GET_PACKAGE_TYPE_STATISTICS_DATA_FE = `${API}${PACKAGES}/package-type-statistics`;
+export const GET_PACKAGE_PARAMETERS_DATA_FE = `${API}${PACKAGES}/add-package-params`;
+export const GET_PACKAGE_REQUEST_PARAMS_DATA_FE = `${API}${PACKAGES}/params-for-tour-request`;
+
+// Package Types
+export const GET_PACKAGE_TYPES_DATA_FE = `${API}${PACKAGES}/types`;
+export const GET_PACKAGE_TYPE_DETAILS_BY_ID_DATA_FE = `${API}${PACKAGES}/types/details`;
+export const GET_PACKAGE_TYPE_BASIC_DETAILS_BY_ID_DATA_FE = `${API}${PACKAGES}/types/basic-details`;
+export const ADD_PACKAGE_TYPE_DATA_FE = `${API}${PACKAGES}/types/add`;
+export const UPDATE_PACKAGE_TYPE_DATA_FE = `${API}${PACKAGES}/types/update`;
+export const TERMINATE_PACKAGE_TYPE_DATA_FE = `${API}${PACKAGES}/types/terminate`;
+
+// Package Schedule
+export const GET_PACKAGE_SCHEDULE_DATA_FE = `${API}${PACKAGES}/schedules`;
+export const GET_PACKAGE_SCHEDULE_PARAMS_FOR_REQUEST_DATA_FE = `${API}${PACKAGES}/schedules/params`;
+export const GET_PACKAGE_SCHEDULE_DETAILS_BY_ID_DATA_FE = `${API}${PACKAGES}/schedules/details`;
+export const ADD_PACKAGE_SCHEDULE_DATA_FE = `${API}${PACKAGES}/schedules/add`;
+export const UPDATE_PACKAGE_SCHEDULE_DATA_FE = `${API}${PACKAGES}/schedules/update`;
+export const TERMINATE_PACKAGE_SCHEDULE_DATA_FE = `${API}${PACKAGES}/schedules/terminate`;
+export const GET_PACKAGE_SCHEDULE_ID_AND_NAMES_DATA_FE = `${API}${PACKAGES}/schedules/package-schedule-id-and-names`;
 
 // Activities
 export const GET_ACTIVITY_DETAILS_BY_ACTIVITY_ID_DATA_FE = `${API}${ACTIVITIES}`;
 export const GET_ALL_ACTIVITIES_DETAILS_DATA_FE = `${API}${ACTIVITIES}`;
 export const GET_ACTIVE_ACTIVITIES_DETAILS_DATA_FE = `${API}${ACTIVITIES}/active-activities`;
 export const GET_ACTIVITIES_DETAILS_BY_REQUEST_DATA_FE = `${API}${ACTIVITIES}/activities-for-request`;
-export const GET_ALL_ACTIVITY_CATEGORIES_DATA_FE = `${API}${ACTIVITIES}/category`;
-export const GET_ACTIVE_ACTIVITY_CATEGORIES_DATA_FE = `${API}${ACTIVITIES}/category-active`;
 export const GET_ACTIVITY_REVIEWS_DETAILS_DATA_FE = `${API}${ACTIVITIES}/reviews-details`;
 export const GET_ACTIVITY_HISTORY_DETAILS_DATA_FE = `${API}${ACTIVITIES}/history-details`;
 export const GET_ACTIVITY_HISTORY_IMAGES_DETAILS_DATA_FE = `${API}${ACTIVITIES}/history-images`;
@@ -218,6 +309,22 @@ export const GET_ACTIVITIES_STATISTICS_DATA_FE = `${API}${ACTIVITIES}/activities
 export const GET_ACTIVITIES_SCHEDULE_STATISTICS_DATA_FE = `${API}${ACTIVITIES}/activities-schedule-statistics`;
 export const GET_ACTIVITIES_CATEGORIES_STATISTICS_DATA_FE = `${API}${ACTIVITIES}/activities-categories-statistics`;
 export const GET_ACTIVITIES_BY_DESTINATION_ID_DATA_FE = `${API}${ACTIVITIES}/activities-by-destinationId`;
+
+// Activity Categories
+export const GET_ALL_ACTIVITY_CATEGORIES_DATA_FE = `${API}${ACTIVITIES}/category`;
+export const GET_ACTIVITY_CATEGORY_DETAILS_BY_ID_DATA_FE = `${API}${ACTIVITIES}/category/details`;
+export const ADD_ACTIVITY_CATEGORY_DATA_FE = `${API}${ACTIVITIES}/category/add`;
+export const UPDATE_ACTIVITY_CATEGORY_DATA_FE = `${API}${ACTIVITIES}/category/update`;
+export const TERMINATE_ACTIVITY_CATEGORY_DATA_FE = `${API}${ACTIVITIES}/category/terminate`;
+
+// Activity Schedule
+export const GET_ACTIVITY_SCHEDULE_DATA_FE = `${API}${ACTIVITIES}/schedules`;
+export const GET_ACTIVITY_SCHEDULE_PARAMS_FOR_REQUEST_DATA_FE = `${API}${ACTIVITIES}/schedules/params`;
+export const GET_ACTIVITY_SCHEDULE_DETAILS_BY_ID_DATA_FE = `${API}${ACTIVITIES}/schedules/details`;
+export const ADD_ACTIVITY_SCHEDULE_DATA_FE = `${API}${ACTIVITIES}/schedules/add`;
+export const UPDATE_ACTIVITY_SCHEDULE_DATA_FE = `${API}${ACTIVITIES}/schedules/update`;
+export const TERMINATE_ACTIVITY_SCHEDULE_DATA_FE = `${API}${ACTIVITIES}/schedules/terminate`;
+export const GET_ACTIVITIES_SCHEDULE_ID_AND_NAMES_DATA_FE = `${API}${ACTIVITIES}/schedules/activities-schedule-id-and-names`;
 
 // Blogs
 export const GET_ALL_BLOGS_DETAILS_DATA_FE = `${API}${BLOGS}`;
@@ -297,7 +404,12 @@ export const GET_VEHICLE_DETAILS_BY_ID_DATA_FE = `${API}${VEHICLES}/vehicle-deta
 
 // Seasons
 export const GET_ACTIVE_SEASONS_BASIC_DETAILS_DATA_FE = `${API}${SEASONS}/basic-details`;
-export const GET_SEASONS_DETAILS_BY_SEASON_ID_DATA_FE = `${API}${SEASONS}`;
+export const GET_SEASONS_DETAILS_BY_SEASON_ID_DATA_FE = `${API}${SEASONS}/details-by-id`;
+export const GET_SEASONS_STATISTICS_DATA_FE = `${API}${SEASONS}/season-statistics`;
+export const GET_SEASONS_IDS_AND_NAMES_DATA_FE = `${API}${SEASONS}/seasonId-and-seasonName`;
+export const CREATE_SEASON_DATA_FE = `${API}${SEASONS}/add-season`;
+export const UPDATE_SEASON_DATA_FE = `${API}${SEASONS}/update-season`;
+export const TERMINATE_SEASON_DATA_FE = `${API}${SEASONS}/terminate-season`;
 
 export const GET_TOUR_DETAILS_BY_ID_FE = `${API}${TOUR}/details-by-id`;
 
@@ -325,7 +437,6 @@ export const GET_VILLA_DETAILS_SECTION_FE = `${API}${ACCOMMODATION}/villas/deati
 export const GET_HOSTEL_DETAILS_SECTION_FE = `${API}${ACCOMMODATION}/hostels/deatils-for-section`;
 export const GET_RESTAURANT_DETAILS_SECTION_FE = `${API}${ACCOMMODATION}/restaurants/deatils-for-section`;
 
-
 // Privileges
 export const GET_ALL_PRIVILEGES_DATA_FE = `${API}${PRIVILEGES}/all-privileges`;
 export const GET_PRIVILEGES_NAMES_AND_IDS_DATA_FE = `${API}${PRIVILEGES}/privileges-names-and-ids`;
@@ -335,7 +446,6 @@ export const CREATE_PRIVILEGE_DATA_FE = `${API}${PRIVILEGES}/create-privilege`;
 export const UPDATE_PRIVILEGE_DATA_FE = `${API}${PRIVILEGES}/update-privilege`;
 export const TERMINATE_PRIVILEGE_DATA_FE = `${API}${PRIVILEGES}/terminate-privilege`;
 export const GET_PRIVILEGES_STATISTICS_DATA_FE = `${API}${PRIVILEGES}/privileges-statistics`;
-
 
 // Role endpoints
 export const GET_ALL_ROLES_DATA_FE = `${API}${ROLES}/all-roles`;
@@ -350,3 +460,9 @@ export const GET_ROLES_STATISTICS_DATA_FE = `${API}${ROLES}/roles-statistics`;
 // Users
 export const GET_USER_NAMES_AND_IDS_WITHOUT_EMPLOYEES_DATA_FE = `${API}${USERS}/user-names-and-ids-without-employees`;
 export const GET_USER_BASIC_DETAILS_BY_USER_ID_DATA_FE = `${API}${USERS}/user-basic-details-by-user-id`;
+
+// Billings
+export const GET_BILLING_DETAILS_BY_BOOKING_ID_DATA_FE = `${API}${BOOKING}/booking-billing-details`;
+
+// Emails
+export const REQUEST_HOTEL_RATES_EMAILS_DATA_FE = `${API}${EMAIL}/request-hotel-rates`;

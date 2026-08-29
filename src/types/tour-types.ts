@@ -1,4 +1,4 @@
-import { ApiResponse } from "./common-types";
+import { ApiResponse, SeasonType } from "./common-types";
 
 // types/tour-types.ts
 export interface Schedule {
@@ -214,14 +214,13 @@ export interface DayToDayDestinationActivity {
   destinationId: number;
   activityName: string;
   activityDescription: string;
-  activitiesCategory: string;
+  activitiesCategory: ActivityCategory[];
   durationHours: number;
   availableFrom: string;
   availableTo: string;
   minParticipate: number;
   maxParticipate: number;
   season: string;
-  categoryName: string;
   images: {
     imageId: number;
     imageName: string;
@@ -230,12 +229,19 @@ export interface DayToDayDestinationActivity {
   }[];
 }
 
+export interface ActivityCategory {
+  id: number;
+  name: string;
+  description: string;
+  is_primary: boolean;
+}
+
 export interface DayToDayDestination {
   destination: {
     destinationId: number;
     destinationName: string;
     destinationDescription: string;
-    category: string;
+    category: DestinationCategory[];
     location: string;
     latitude: number;
     longitude: number;
@@ -248,6 +254,13 @@ export interface DayToDayDestination {
     }[];
   };
   activities: DayToDayDestinationActivity[];
+}
+
+export interface DestinationCategory {
+  id: number;
+  name: string;
+  description: string;
+  isPrimary: boolean;
 }
 
 export interface DayToDayResponse {
@@ -293,10 +306,8 @@ export interface TourAllDetails {
   longitude: number;
   startLocation: string;
   endLocation: string;
-  tourTypeName: string;
-  tourTypeDescription: string;
-  tourCategoryName: string;
-  tourCategoryDescription: string;
+  tourTypeDtos: TourType[];
+  tourCategoryDto: TourCategory[];
   seasonName: string;
   seasonDescription: string;
   statusName: "ACTIVE" | "INACTIVE";
@@ -310,6 +321,18 @@ export interface TourAllDetails {
   conditions: Condition[];
   travelTips: TravelTip[];
   dayToDayResponses: DayToDayResponse[];
+}
+
+export interface TourType {
+  tourTypeId: number;
+  tourTypeName: string;
+  tourTypeDescription: string;
+}
+
+export interface TourCategory {
+  tourCategoryId: number;
+  tourCategoryName: string;
+  tourCategoryDescription: string;
 }
 
 export interface TourAllDetailsResponse {
@@ -683,4 +706,147 @@ export interface Activity {
   activityId: number;
   name: string;
   description: string;
+}
+
+export interface TourRequestParams {
+  minPrice: number;
+  maxPrice: number;
+  durations: number[];
+  locations: string[];
+}
+
+export type TourRequestParamsApiResponse = ApiResponse<TourRequestParams>;
+
+export interface TourScheduleListProps {
+  schedules: Schedule[];
+}
+
+export interface TourQuickStatsProps {
+  duration: number;
+  totalDays: number;
+  totalDestinations: number;
+  totalActivities: number;
+  totalSchedules: number;
+  totalInclusions: number;
+  totalExclusions: number;
+  totalImages: number;
+  status: string;
+  tourTypeDtos: TourType[];
+  tourCategoryDto: TourCategory[];
+  seasonName: string;
+}
+
+export interface TourLocationFormProps {
+  formData: any;
+  errors: Record<string, string>;
+  loading: boolean;
+  onInputChange: (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => void;
+}
+
+export interface TourDestinationsFormProps {
+  days: TourDays[];
+  onDaysChange: (days: TourDays[]) => void;
+  error?: string;
+}
+
+export interface ActivityItem {
+  activityId: number;
+  name: string;
+  description?: string;
+  durationHours?: number;
+  priceLocal?: number;
+  priceForeigners?: number;
+}
+
+export interface ActivityMultiSelectorProps {
+  destinationId?: number;
+  selectedActivities: number[];
+  onActivitiesChange: (activities: number[]) => void;
+  error?: string;
+  placeholder?: string;
+  disabled?: boolean;
+}
+
+export interface InclusionsExclusionsFormProps {
+  inclusions: InclusionInput[];
+  exclusions: ExclusionInput[];
+  onInclusionsChange: (inclusions: InclusionInput[]) => void;
+  onExclusionsChange: (exclusions: ExclusionInput[]) => void;
+}
+
+export interface ConditionsTipsFormProps {
+  conditions: ConditionInput[];
+  travelTips: TravelTipInput[];
+  onConditionsChange: (conditions: ConditionInput[]) => void;
+  onTravelTipsChange: (travelTips: TravelTipInput[]) => void;
+}
+
+export interface Employee {
+  employeeId: number;
+  firstName: string;
+  lastName: string;
+  imageUrl: string;
+  email: string;
+  mobileNumber1: string;
+  designationName: string;
+  tours: {
+    name: string | null;
+    tour_id: number | null;
+  }[];
+}
+
+export interface AssignToSelectorProps {
+  value?: number;
+  onChange: (employeeId: number) => void;
+  assignMessage: string;
+  onAssignMessageChange: (message: string) => void;
+  error?: string;
+  required?: boolean;
+}
+
+export interface TourInfoFormProps {
+  formData: any;
+  errors: Record<string, string>;
+  onInputChange: (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => void;
+  onStatusChange: (value: "ACTIVE" | "INACTIVE") => void;
+}
+
+export interface BasicInfoFormProps {
+  tour: TourAllDetails;
+  hasChanged: (field: string) => boolean;
+  onFieldChange: (field: string, value: any) => void;
+  availableSeasons: SeasonType[];
+}
+
+export interface TourSearchItem {
+  id: number;
+  name: string;
+}
+
+export interface BasicInfoPanelProps {
+  tourDetails: Tour;
+}
+
+export interface SchedulesListProps {
+  schedules: Schedule[];
+}
+
+ export interface TourStatsProps {
+  tourDetails: Tour;
+}
+
+export interface StatItem {
+  label: string;
+  value: number | string;
+  icon: React.ReactNode;
+  color: string;
+  formatter?: (value: number | string) => string | number;
 }

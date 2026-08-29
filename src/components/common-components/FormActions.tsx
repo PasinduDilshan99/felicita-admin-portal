@@ -12,6 +12,7 @@ interface FormActionsProps {
   errors?: Record<string, string>;
   submitText?: string;
   resetText?: string;
+  submitButtonType?: "button" | "submit";
 }
 
 export const FormActions: React.FC<FormActionsProps> = ({
@@ -22,6 +23,7 @@ export const FormActions: React.FC<FormActionsProps> = ({
   errors = {},
   submitText = "Create",
   resetText = "Reset Form",
+  submitButtonType = "button",
 }) => {
   const { theme } = useTheme();
   
@@ -107,7 +109,7 @@ export const FormActions: React.FC<FormActionsProps> = ({
             </button>
 
             <button
-              type="submit"
+              type={submitButtonType}
               onClick={onSubmit}
               disabled={loading || uploadingImages}
               className="cursor-pointer flex-1 px-6 py-3 rounded-xl text-white font-medium flex items-center justify-center gap-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:translate-y-[-1px] active:translate-y-0 disabled:hover:translate-y-0"

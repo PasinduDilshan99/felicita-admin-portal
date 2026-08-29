@@ -1,34 +1,108 @@
 export const MAIN_PAGE_PAGE_TITLE = "Felicita Trips";
 
-export const HOME_PAGE_PAGE_TITLE = "Admin Portal | Felicita Trips";
+export const HOME_PAGE_TITLE = "Admin Portal | Felicita Trips";
+
+export const CONTENT_MANAGEMENT_PAGE_TITLE = "Content Management";
 
 export const DESTINATION_PAGE_TITLE = "Destinations";
-export const VIEW_DESTINATION_PAGE_TITLE = "View Destinations";
-export const VIEW_DESTINATION_DETAILS_PAGE_TITLE = "View Destination Details";
-export const ADD_DESTINATION_PAGE_TITLE = "Add New Destination";
-export const UPDATE_DESTINATION_PAGE_TITLE = "Update Destination";
-export const REMOVE_DESTINATION_PAGE_TITLE = "Terminate Destination";
+export const DESTINATION_VIEW_PAGE_TITLE = "View Destinations";
+export const DESTINATION_VIEW_DETAILS_PAGE_TITLE = "View Destination Details";
+export const DESTINATION_CREATE_PAGE_TITLE = "Add New Destination";
+export const DESTINATION_UPDATE_PAGE_TITLE = "Update Destination";
+export const DESTINATION_TERMINATE_PAGE_TITLE = "Terminate Destination";
 
 export const DESTINATION_CATEGORIES_PAGE_TITLE = "Destination Categories";
-export const VIEW_DESTINATION_CATEGORIES_PAGE_TITLE = "Destination Categories";
-export const VIEW_DESTINATION_CATEGORY_DETAILS_PAGE_TITLE ="Destination Category Details";
-export const ADD_DESTINATION_CATEGORY_PAGE_TITLE ="Add New Destination Category";
-export const UPDATE_DESTINATION_CATEGORY_PAGE_TITLE ="Update Destination Category";
-export const REMOVE_DESTINATION_CATEGORY_PAGE_TITLE ="Terminate Destination Category";
+export const DESTINATION_CATEGORIES_VIEW_PAGE_TITLE = "Destination Categories";
+export const DESTINATION_CATEGORY_VIEW_DETAILS_PAGE_TITLE =
+  "Destination Category Details";
+export const DESTINATION_CATEGORY_CREATE_PAGE_TITLE =
+  "Add New Destination Category";
+export const DESTINATION_CATEGORY_UPDATE_PAGE_TITLE =
+  "Update Destination Category";
+export const DESTINATION_CATEGORY_TERMINATE_PAGE_TITLE =
+  "Terminate Destination Category";
 
 export const ACTIVITY_PAGE_TITLE = "Activities";
-export const VIEW_ACTIVITY_PAGE_TITLE = "View Activities";
-export const VIEW_ACTIVITY_DETAILS_PAGE_TITLE = "View Activity Details";
-export const ADD_ACTIVITY_PAGE_TITLE = "Add New Activity";
-export const UPDATE_ACTIVITY_PAGE_TITLE = "Update Activity";
-export const REMOVE_ACTIVITY_PAGE_TITLE = "Terminate Activity";
+export const ACTIVITY_VIEW_PAGE_TITLE = "View Activities";
+export const ACTIVITY_DETAILS_VIEW_PAGE_TITLE = "View Activity Details";
+export const ACTIVITY_CREATE_PAGE_TITLE = "Add New Activity";
+export const ACTIVITY_UPDATE_PAGE_TITLE = "Update Activity";
+export const ACTIVITY_TERMINATE_PAGE_TITLE = "Terminate Activity";
 
 export const ACTIVITY_CATEGORY_PAGE_TITLE = "Activity Categories";
+export const ACTIVITY_CATEGORY_VIEW_PAGE_TITLE = "Activity Categories";
+export const ACTIVITY_CATEGORY_VIEW_DETAILS_PAGE_TITLE = "Activity Categories";
+export const ACTIVITY_CATEGORY_CREATE_PAGE_TITLE = "Activity Categories";
+export const ACTIVITY_CATEGORY_UPDATE_PAGE_TITLE = "Activity Categories";
+export const ACTIVITY_CATEGORY_TERMINATE_PAGE_TITLE = "Activity Categories";
 
+export const ACTIVITY_SCHEDULE_PAGE_TITLE = "Activity Categories";
+export const ACTIVITY_SCHEDULE_VIEW_PAGE_TITLE = "Activity Categories";
+export const ACTIVITY_SCHEDULE_VIEW_DETAILS_PAGE_TITLE = "Activity Categories";
+export const ACTIVITY_SCHEDULE_CREATE_PAGE_TITLE = "Activity Categories";
+export const ACTIVITY_SCHEDULE_UPDATE_PAGE_TITLE = "Activity Categories";
+export const ACTIVITY_SCHEDULE_TERMINATE_PAGE_TITLE = "Activity Categories";
 
-export const WEB_PAGE_MANAGEMENT_PAGE_TITLE = "Web Page Management";
+export const TOUR_SCHEDULE_PAGE_TITLE = "Activity Categories";
+export const TOUR_SCHEDULE_VIEW_PAGE_TITLE = "Activity Categories";
+export const TOUR_SCHEDULE_VIEW_DETAILS_PAGE_TITLE = "Activity Categories";
+export const TOUR_SCHEDULE_CREATE_PAGE_TITLE = "Activity Categories";
+export const TOUR_SCHEDULE_UPDATE_PAGE_TITLE = "Activity Categories";
+export const TOUR_SCHEDULE_TERMINATE_PAGE_TITLE = "Activity Categories";
+
+export const SEASON_PAGE_TITLE = "Activities";
+export const SEASON_VIEW_PAGE_TITLE = "View Activities";
+export const SEASON_DETAILS_VIEW_PAGE_TITLE = "View Activity Details";
+export const SEASON_CREATE_PAGE_TITLE = "Add New Activity";
+export const SEASON_UPDATE_PAGE_TITLE = "Update Activity";
+export const SEASON_TERMINATE_PAGE_TITLE = "Terminate Activity";
+
+export const TOUR_PAGE_TITLE = "Tours";
+export const TOUR_VIEW_PAGE_TITLE = "View Tours";
+export const TOUR_DETAILS_VIEW_PAGE_TITLE = "View Tour Details";
+export const TOUR_CREATE_PAGE_TITLE = "Add New Tour";
+export const TOUR_UPDATE_PAGE_TITLE = "Update Tour";
+export const TOUR_TERMINATE_PAGE_TITLE = "Terminate Tour";
+
+export const TOUR_CATEGORY_PAGE_TITLE = "Tour Categories";
+export const TOUR_CATEGORY_VIEW_PAGE_TITLE = "Tour Categories";
+export const TOUR_CATEGORY_VIEW_DETAILS_PAGE_TITLE = "Tour Categories";
+export const TOUR_CATEGORY_CREATE_PAGE_TITLE = "Tour Categories";
+export const TOUR_CATEGORY_UPDATE_PAGE_TITLE = "Tour Categories";
+export const TOUR_CATEGORY_TERMINATE_PAGE_TITLE = "Tour Categories";
+
+export const TOUR_TYPES_PAGE_TITLE = "Tour Categories";
+export const TOUR_TYPES_VIEW_PAGE_TITLE = "Tour Categories";
+export const TOUR_TYPE_VIEW_DETAILS_PAGE_TITLE = "Tour Categories";
+export const TOUR_TYPE_CREATE_PAGE_TITLE = "Tour Categories";
+export const TOUR_TYPE_UPDATE_PAGE_TITLE = "Tour Categories";
+export const TOUR_TYPE_TERMINATE_PAGE_TITLE = "Tour Categories";
+
+export const PACKAGE_PAGE_TITLE = "Tours";
+export const PACKAGE_VIEW_PAGE_TITLE = "View Tours";
+export const PACKAGE_DETAILS_VIEW_PAGE_TITLE = "View Tour Details";
+export const PACKAGE_CREATE_PAGE_TITLE = "Add New Tour";
+export const PACKAGE_UPDATE_PAGE_TITLE = "Update Tour";
+export const PACKAGE_TERMINATE_PAGE_TITLE = "Terminate Tour";
+
+export const PACKAGE_TYPES_PAGE_TITLE = "Tour Categories";
+export const PACKAGE_TYPES_VIEW_PAGE_TITLE = "Tour Categories";
+export const PACKAGE_TYPE_VIEW_DETAILS_PAGE_TITLE = "Tour Categories";
+export const PACKAGE_TYPE_CREATE_PAGE_TITLE = "Tour Categories";
+export const PACKAGE_TYPE_UPDATE_PAGE_TITLE = "Tour Categories";
+export const PACKAGE_TYPE_TERMINATE_PAGE_TITLE = "Tour Categories";
+
+export const PACKAGE_SCHEDULE_PAGE_TITLE = "Activity Categories";
+export const PACKAGE_SCHEDULE_VIEW_PAGE_TITLE = "Activity Categories";
+export const PACKAGE_SCHEDULE_VIEW_DETAILS_PAGE_TITLE = "Activity Categories";
+export const PACKAGE_SCHEDULE_CREATE_PAGE_TITLE = "Activity Categories";
+export const PACKAGE_SCHEDULE_UPDATE_PAGE_TITLE = "Activity Categories";
+export const PACKAGE_SCHEDULE_TERMINATE_PAGE_TITLE = "Activity Categories";
+
+export const WEBSITE_PAGE_MANAGEMENT_PAGE_TITLE = "Web Page Management";
 export const HOME_PAGE_MANAGEMENT_PAGE_TITLE = "Home Page Management";
-export const HOME_PAGE_TRENDING_DESTINATION_MANAGEMENT_PAGE_TITLE = "Trending Destination Management";
+export const HOME_PAGE_TRENDING_DESTINATION_MANAGEMENT_PAGE_TITLE =
+  "Trending Destination Management";
 
 export const EMPLOYEE_MANAGEMENT_PAGE_TITLE = "Web Page Management";
 
@@ -50,3 +124,42 @@ export const EMPLOYEE_PAGE_MANAGEMENT_PAGE_TITLE = "Employee Management";
 export const EMPLOYEE_VIEW_PAGE_TITLE = "Employees View";
 export const EMPLOYEE_DETAILS_VIEW_PAGE_TITLE = "Employee Details View";
 export const EMPLOYEE_CREATE_PAGE_TITLE = "Employee Create";
+
+// Bookings
+export const BOOKING_MANAGEMENT_PAGE_TITLE = "Booking Management";
+export const TOUR_BOOKINGS_PAGE_TITLE = "Booking Management";
+export const TOUR_BOOKINGS_VIEW_PAGE_TITLE = "Bookings View";
+export const TOUR_BOOKINGS_DETAILS_VIEW_PAGE_TITLE = "Booking Details View";
+export const TOUR_BOOKINGS_ADD_PAGE_TITLE = "Add New Booking";
+export const TOUR_BOOKINGS_UPDATE_PAGE_TITLE = "Update Booking";
+export const TOUR_BOOKINGS_CANCELED_PAGE_TITLE = "Canceled Booking";
+
+export const BOOKINGS_STATUS_PAGE_TITLE = "Booking Status Management";
+export const BOOKINGS_STATUS_VIEW_PAGE_TITLE = "Bookings Status View";
+export const BOOKINGS_STATUS_DETAILS_VIEW_PAGE_TITLE = "Booking Status Details View";
+export const BOOKINGS_STATUS_ADD_PAGE_TITLE = "Add New Booking Status";
+export const BOOKINGS_STATUS_UPDATE_PAGE_TITLE = "Update Booking Status";
+export const BOOKINGS_STATUS_TERMINATE_PAGE_TITLE = "Canceled Booking Status";
+
+export const BOOKINGS_ASSIGN_PAGE_TITLE = "Booking Assign Management";
+export const BOOKINGS_ASSIGN_VIEW_PAGE_TITLE = "Bookings Assign View";
+export const BOOKINGS_ASSIGN_DETAILS_VIEW_PAGE_TITLE = "Booking Assign Details View";
+export const BOOKINGS_ASSIGN_ADD_PAGE_TITLE = "Add New Booking Assign";
+export const BOOKINGS_ASSIGN_UPDATE_PAGE_TITLE = "Update Booking Assign";
+
+export const BOOKINGS_HISTORY_PAGE_TITLE = "Booking History Management";
+export const BOOKINGS_HISTORY_VIEW_PAGE_TITLE = "Bookings History View";
+export const BOOKINGS_HISTORY_DETAILS_VIEW_PAGE_TITLE = "Booking History Details View";
+
+// =========================================================
+// HOTEL MANAGEMENT PAGE TITLES
+// =========================================================
+export const HOTEL_MANAGEMENT_PAGE_TITLE = "Hotel Management";
+export const HOTEL_RATES_PAGE_TITLE = "Hotel Rates";
+export const HOTEL_RATES_VIEW_PAGE_TITLE = "View Hotel Rates";
+export const HOTEL_RATES_DETAILS_VIEW_PAGE_TITLE = "Hotel Rate Details";
+export const HOTEL_RATES_CREATE_PAGE_TITLE = "Add New Hotel Rate";
+export const HOTEL_RATES_UPDATE_PAGE_TITLE = "Update Hotel Rate";
+export const HOTEL_RATES_REQUEST_PAGE_TITLE = "Request Hotel Rate";
+export const HOTEL_RATES_TERMINATE_PAGE_TITLE = "Remove Hotel Rate";
+export const HOTEL_RATES_COMPARE_PAGE_TITLE = "Compare Hotel Rates";

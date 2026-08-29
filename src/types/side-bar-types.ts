@@ -10,15 +10,24 @@ export interface SideBarDataType {
     name: string;
     description: string;
     url: string;
-    color?: string;
+    color: string;
     privilege: string;
     grandSubData?: {
       id: number;
       name: string;
       description: string;
       url: string;
-      color?: string;
+      color: string;
       privilege: string;
     }[];
   }[];
+}
+
+export interface SidebarProps {
+  data: SideBarDataType[];
+  title?: string;
+  logo?: string;
+  minWidth?: number;
+  maxWidth?: number;
+  defaultWidth?: number;
 }

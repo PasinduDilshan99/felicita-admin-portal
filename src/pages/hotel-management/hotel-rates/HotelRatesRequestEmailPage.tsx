@@ -220,7 +220,7 @@ const HotelRatesRequestEmailPage = () => {
 
   // Generate a default subject
   const generateDefaultSubject = () => {
-    return "Request for Travel Agent Rates – Summer & Winter";
+    return "Request For Travel Agent Rates";
   };
 
   // Handle auto-fill subject
